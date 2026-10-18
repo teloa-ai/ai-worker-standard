@@ -149,7 +149,7 @@ YAML 주석은 교환 의미에 포함되지 않습니다. 권한, 제한 및 �
 
 OASF discovery 데이터는 고정 버전 그대로 담습니다. 자세한 내용은 부록 §7을 참조하십시오. 이를 바탕으로 discovery 레코드를 내보낼 수 있으며, 동의어로 된 별도의 능력 분류 체계를 만들지 않습니다. [OASF Record Guide](https://docs.agntcy.org/oasf/agent-record-guide/) · [Discovery Extension](https://docs.agntcy.org/oasf/discovery-extension/)
 
-Agent Spec의 컴포넌트 참조는 설정 내부의 `$component_ref`를 사용합니다. 입력과 출력은 JSON Schema에 기반하며 Swarm과 ManagerWorkers는 구체적인 협업 동작을 포함합니다. 이번 판은 파일 간 id＋revision을 유지하고 책임 인계, 대화 전달 및 권한을 각각 처리합니다. 변환할 때 실제 패턴을 검증해야 합니다. 전체 대화를 기본으로 공유하거나 입력과 출력의 타입을 암묵적으로 변환해서는 안 됩니다. [Agent Spec 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
+Agent Spec의 컴포넌트 참조는 설정 내부의 `$component_ref`를 사용합니다. 입력과 출력은 JSON Schema에 기반하며 Swarm과 ManagerWorkers는 구체적인 협업 동작을 포함합니다. 이번 판은 파일 간 id＋revision을 유지하고 책임 인계, 대화 전달 및 권한을 각각 처리합니다. 변환할 때 실제 입력·출력 제약과 협업 동작을 검증해야 합니다. 전체 대화를 기본으로 공유하거나 입력과 출력의 타입을 암묵적으로 변환해서는 안 됩니다. [Agent Spec 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
 
 정의를 참고하는 것, 네이티브 데이터를 유지하는 것, 호환성 검증을 통과하는 것은 서로 다른 선언입니다. 이 설계를 수용했다고 모든 OASF 모듈이나 Agent Spec 런타임과 호환되는 것은 아닙니다. [Grok 설계 설명](https://x.ai/news/designing-grok-bot) · [Team Bots](https://docs.x.ai/grok-bot/team-bots)
 
@@ -317,7 +317,7 @@ Selector는 `{"type":"tool"또는"prompt","name":비어 있지 않은 문자열}
 }
 ```
 
-**MCP:** connectionRef는 배포 담당자가 매핑하며, 실제 연결을 표시하고 별도로 권한을 부여해야 합니다. token이나 실행 명령을 포함하지 않습니다. 선언된 버전의 탐색·전송·인증 및 권한 부여 규칙을 따르고, 도구 이름만으로 다른 연결에 자동 매칭해서는 안 됩니다. 코어는 도구별 매개변수를 기술하거나 범용 도구 권한 언어를 제정하지 않습니다. [MCP 버전 규칙](https://modelcontextprotocol.io/docs/2026-07-28/learn/versioning)
+**MCP:** connectionRef는 배포 담당자가 매핑하며, 실제 연결을 표시하고 별도로 권한을 부여해야 합니다. token이나 실행 명령을 포함하지 않습니다. 선언된 버전의 탐색·전송·권한 부여 규칙을 따르고, 도구 이름만으로 다른 연결에 자동 매칭해서는 안 됩니다. 코어는 도구별 매개변수를 기술하거나 범용 도구 권한 언어를 제정하지 않습니다. [MCP 버전 규칙](https://modelcontextprotocol.io/docs/2026-07-28/learn/versioning)
 
 **Skills:** formatSnapshot은 변경 불가능한 형식 명세 출처여야 하며, 다이제스트는 전체 패키지의 원래 바이트를 대상으로 합니다. 압축 해제 루트는 하나의 스킬 디렉터리입니다. 경로 이탈, 정규화 후 중복 경로, 심볼릭 링크와 하드 링크를 거부해야 하며 가져오기 중 스크립트를 실행해서는 안 됩니다. ZIP／TAR는 이 명세의 패키징 규약이지 Agent Skills의 네이티브 요구가 아닙니다. [Agent Skills 형식](https://agentskills.io/specification)
 
@@ -356,7 +356,7 @@ Selector는 `{"type":"tool"또는"prompt","name":비어 있지 않은 문자열}
 | 번호 | 입력 또는 작업 | 반드시 관찰해야 할 결과 |
 | --- | --- | --- |
 | T01 | 중복 키, 알 수 없는 코어 필드, 잘못된 kind／타입, 알 수 없는 코어 버전 | 거부하거나 버전 미지원을 명확히 보고 |
-| T02 | 제 4·5 절 및 알 수 없는 확장을 포함한 유효 정의를 가져온 뒤 내보내기 | JSON 값 유지, 다른 구성원의 동명 능력을 합치지 않음 |
+| T02 | 제 4·5 절의 예제, 알 수 없는 확장을 포함한 유효 정의, 각 구성원이 동명 능력을 선언한 구성 정의와 그 구성원 정의를 가져온 뒤 내보내기 | JSON 값 유지, 다른 구성원의 동명 능력을 합치지 않음 |
 | T03 | 같은 id／revision의 서로 다른 값. 키 순서·공백·10과 10.0·배열 생략과 명시적 빈 배열도 비교 | R02로 판단. 값이 다를 때만 충돌하며 덮어쓸 수 없음. 생략과 빈 배열은 충돌하고 값 변경에는 새 revision 필요 |
 | T04 | A → B → C 중첩 참조. 누락·리비전 불일치·순환·대소문자만 다른 참조. C의 필수 능력 또는 required 확장 누락 | 참조 오류 위치를 보고하고 조립 중단. 자동 네트워크 접속이나 정규화로 보완하지 않음. C가 부족하면 A는 완전 지원을 선언할 수 없고 R05／R06에 따라 실행 제한 |
 | T05 | 알 수 없는 optional／required 확장. 지원 중인 제약 확장을 잘못 optional로 표시 | 미지 항목은 모두 유지·보고. required는 조립·실행·완전 지원 선언 차단. 알려진 불법 제약도 거부하고 검증 통과로 표시 금지. 오류 보고와 원본 파일 보존은 가능 |

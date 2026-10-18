@@ -141,7 +141,7 @@ La definición Worker describe puesto y contratos. La instancia Worker correspon
 | Ejecución | Work, tarea y Run | Work es contrato reutilizable; tarea es asignación concreta; Run fija entradas, versiones y ejecutor de una ejecución |
 | Entrega | Resultados fijos | Contenido inspeccionable, versiones, pruebas y contribuyentes, además del estado «finalizado» |
 | Entrega | Aceptación | Quién comprobó qué versión, contra qué requisitos y con qué conclusión; independencia frente a contribuyentes cuando se exige |
-| Decisión | Adopción | Si el responsable usará el resultado; separada de aceptación, sin permiso automático para publicar o contener incidentes |
+| Decisión | Adopción | Si el responsable usará el resultado; separada de aceptación, sin permiso automático para publicar o actuar sobre el resultado |
 
 La revisión 2 del puesto de resúmenes es una definición. Un asistente documental creado con ella es una instancia. Los resúmenes de esta semana y la siguiente son tareas distintas con sus Runs y resultados. Actualizar la plantilla no reescribe Runs ni transfiere resultados a otro empleado.
 

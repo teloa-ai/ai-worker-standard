@@ -52,13 +52,13 @@ runtime, policy, trigger 또는 자원으로 기술한 application에 대해서�
 
 `ParticipantRef`는 `self`, `member/<LocalId>` 또는 `authority/<LocalId>`입니다. self는 현재 정의에 대응하는 인스턴스를 뜻합니다. member는 현재 organization의 직접 Member 슬롯만 참조하며 작업별 consultant도 포함합니다. authority는 현재 data.authorityRoles를 뜻합니다. agent는 member 참조를 사용해서는 안 됩니다. 모든 참조는 존재해야 하며 이름으로 추측해서는 안 됩니다. responsible은 self 또는 member여야 합니다. 외부 사람이 검수와 에스컬레이션을 담당할 수 있지만 AI 실행자인 것처럼 표현해서는 안 됩니다. organization에서 self를 사용하면 구성체가 외부 납품을 책임진다는 뜻입니다. 이때도 호스트는 실제 실행자·입력 분배 담당·출력 취합 담당을 기록해야 하며 조직 명의로 실제 기여자를 대신해서는 안 됩니다.
 
-**Acceptance**는 `criteria:비어 있지 않은 문자열 배열、reviewer:ParticipantRef、independent:boolean`을 포함합니다. criteria는 확인 가능한 완료 요구이고 reviewer는 검수 책임 위치입니다. independent=true이면 호스트는 실제 검토 주체가 검토 대상 결과물의 실제 실행 주체와 다름을 증명해야 합니다. 복합 결과물은 실제 기여자를 확인해야 하며, 주 책임자나 팀 명의만 비교해서는 안 됩니다. 두 슬롯·두 세션·두 이름은 독립성 증거가 아닙니다. 독립적인 주체라고 판단 품질이 자동 증명되는 것도 아닙니다. 검수 기록은 채택한 결과물 버전을 고정하며, 구조 검증 통과·모델 완료·업무 채택을 각각 기록합니다.
+**Acceptance**는 `criteria:비어 있지 않은 문자열 배열、reviewer:ParticipantRef、independent:boolean`을 포함합니다. criteria는 확인 가능한 완료 요구이고 reviewer는 검수 책임 위치입니다. independent=true이면 호스트는 실제 검토 주체가 검토 대상 결과물의 실제 실행 주체와 다름을 증명해야 합니다. 복합 결과물은 실제 기여자를 확인해야 하며, 주 책임자나 팀 명의만 비교해서는 안 됩니다. 두 슬롯·두 세션·두 이름은 독립성 증거가 아닙니다. 독립적인 주체라고 판단 품질이 자동 증명되는 것도 아닙니다. 검수 기록은 검토 대상 결과물 버전을 고정하며, 구조 검증 통과·모델 완료·업무 채택을 각각 기록합니다.
 
 inputs와 outputs의 루트는 `type:object`여야 하며 `$schema = https://json-schema.org/draft/2020-12/schema`를 선언해야 합니다. [JSON Schema 2020-12](https://json-schema.org/draft/2020-12)의 표준 어휘를 재사용하고 독자 타입 언어를 만들지 않습니다. Schema에는 설명과 `$defs`를 포함할 수 있습니다. 모든 참조(`$ref`, `$dynamicRef` 포함)는 해당 Schema 문서 안만 가리켜야 하며, 중첩 `$id`로 참조의 문서 경계를 바꾸어서는 안 됩니다. 가져올 때 네트워크에 접속하여 참조를 해석하지 않습니다. 구현은 지원하지 않는 어휘나 제약을 보고해야 하며 무시한 뒤 검증 통과라고 해서는 안 됩니다. format을 핵심 검수에 사용한다면 해당 형식 검사 능력을 명시적으로 선언하고 검증해야 합니다.
 
 입력 항목이 부족하면 보완 필요 상태를 보고합니다. 출력이 부족하거나 타입이 맞지 않으면 결과물 계약에 적합하다고 선언해서는 안 됩니다. 문자열을 숫자로, false를 0으로 암묵적으로 변환하거나 소수를 잘라내지 않습니다. Schema default는 설명일 뿐 사용자가 그 값을 제공하거나 승인했다는 의미가 아닙니다. 자유 형식 텍스트 결과는 문자열 필드에 넣을 수 있으며, 업무 증거와 판단 품질은 여전히 acceptance로 확인합니다.
 
-**의존성 검사:** 먼저 코어 capabilities와 R05/R06 조건을 만족한 뒤 data.requires, memoryPolicyRef, 선택한 Work.requires의 합집합을 구하고 Resource.requires를 재귀적으로 펼칩니다. 참조 누락이나 자원 의존성 순환은 정의 오류입니다. 연결·권한·해석기 부족은 해당 작업의 준비 미완료를 뜻합니다. 다른 작업 전용 자원이 미설정이라고 현재 작업을 차단하지는 않습니다. 전체 필수 의존성 부족은 여전히 전체 실행을 차단합니다. 파싱 지원·설정 준비 완료·실제 권한을 각각 보고하며 일부 사용 가능 상태를 전체 실행 가능이라고 선언해서는 안 됩니다.
+**의존성 검사:** 먼저 코어 capabilities와 R05/R06 조건을 만족한 뒤 data.requires, memoryPolicyRef, 존재하는 경우 governance.changePolicyRef, 선택한 Work.requires의 합집합을 구하고 Resource.requires를 재귀적으로 펼칩니다. 참조 누락이나 자원 의존성 순환은 정의 오류입니다. 연결·권한·해석기 부족은 해당 작업의 준비 미완료를 뜻합니다. 다른 작업 전용 자원이 미설정이라고 현재 작업을 차단하지는 않습니다. 전체 필수 의존성 부족은 여전히 전체 실행을 차단합니다. 파싱 지원·설정 준비 완료·실제 권한을 각각 보고하며 일부 사용 가능 상태를 전체 실행 가능이라고 선언해서는 안 됩니다.
 
 ## 4. 정기 작업과 경험
 
@@ -92,7 +92,7 @@ Handoff.inputs의 키는 수신 작업 입력 객체의 최상위 필드 이름�
 
 각 실제 인계에는 출처 작업／Run, 결과물 버전, 송신·수신 주체, 매핑 후 자료, 허용 범위 및 수신／거부 결과를 고정합니다. 수신 측이 확인하고 작업 귀속을 확립한 후에만 인계 완료로 간주합니다. 계약에 필요하고 권한이 허용한 자료만 전달하며, 전체 대화·개인 기억·연결 자격 증명을 암묵적으로 넘겨서는 안 됩니다. 그룹 메시지 발송과 인계 성공은 별도로 기록합니다.
 
-**Sharing**은 `resource:LocalId、recipients:비어 있지 않은 ParticipantRef 배열`을 포함합니다. resource는 현재 resources를 참조하고 수신자는 현재 member로만 제한합니다. 가시성과 구체적인 버전은 여전히 호스트 권한에 따라 결정됩니다. sharing은 권한 부여가 아니며 공유 자원을 모든 구성원의 필수 의존성으로 자동 변환하지도 않습니다. 작업에서 필요하면 수신 작업의 입력이나 의존성에서 명시적으로 받아야 합니다.
+**Sharing**은 `resource:LocalId、recipients:비어 있지 않은 ParticipantRef 배열`을 포함합니다. resource는 현재 resources를 참조하고 수신자는 현재 구성체의 직접 Member 슬롯, 즉 `member/<LocalId>`로 제한하며 consultant 슬롯도 포함합니다. 가시성과 구체적인 버전은 여전히 호스트 권한에 따라 결정됩니다. sharing은 권한 부여가 아니며 공유 자원을 모든 구성원의 필수 의존성으로 자동 변환하지도 않습니다. 작업에서 필요하면 수신 작업의 입력이나 의존성에서 명시적으로 받아야 합니다.
 
 **StopPolicy**는 `maxHops:양의 정수、maxNoProgress:양의 정수、escalateTo:ParticipantRef`를 포함합니다. 카운트는 동일 작업과 파생 인계 체인에 적용하며 직원 교체나 재시도로 초기화하지 않습니다. maxHops는 인계 횟수를 제한합니다. maxNoProgress는 새로운 검증 가능한 증거가 추가되지 않거나 선언된 검수 항목의 개선이 없는 연속 라운드 수를 제한합니다. 어느 한도에 도달하면 추가 배정을 중단하고 에스컬레이션해야 합니다. 재개하려면 신뢰 주체의 명시적인 처리와 새 기록이 필요합니다. 수치는 상황별로 설정하며 직원 능력 점수가 아닙니다.
 
@@ -127,7 +127,7 @@ AI Team은 협업 계약을 사용하며, 이번 판의 AI Organization 정의�
 
 ## 7. OASF와 Agent Spec을 수용하는 실제 범위
 
-OASF discovery는 독립 확장으로 담습니다. 고정 버전의 네이티브 discovery Schema URI를 id로, 동일한 schema_version을 version으로 쓰고 네이티브 payload를 data에 그대로 둡니다. 탐색 정보만 제공하면 required=false입니다. 무시할 수 없는 실행 선택 조건에 쓰면 required=true를 선언하고 그 의미를 검증해야 합니다. 분류 자체는 여전히 권한을 주지 않습니다. wrapper는 이 명세의 매핑 방식이며 네이티브 A2A 요청 본문이 아닙니다.
+OASF discovery는 독립 확장으로 담습니다. 고정 버전의 네이티브 discovery Schema URI를 id로, 동일한 schema_version을 version으로 쓰고 네이티브 payload를 data에 그대로 둡니다. 탐색 정보만 제공하면 required=false입니다. 무시할 수 없는 실행 선택 조건에 쓰면 required=true를 선언하고 그 의미를 검증해야 합니다. 분류 자체는 여전히 권한을 주지 않습니다. 여기서는 이 명세의 Extension 래퍼를 사용하며, 이는 A2A Agent Card의 AgentExtension 래퍼와 다릅니다. 두 형식 모두 네이티브 OASF discovery payload를 담을 수 있지만 래퍼 필드를 그대로 서로 바꾸어 사용할 수는 없습니다.
 
 예를 들어 네이티브 payload의 `schema_version、skills、domains`는 원래 이름과 의미를 유지합니다. skills는 능력 분류, domains는 분야입니다. 고정 카탈로그에 실제 있는 항목만 OASF 분류 검증 통과를 선언할 수 있습니다. 호스트는 신뢰할 수 있는 고정 Schema／분류 스냅샷을 오프라인으로 사용할 수 있으며 URI를 가져왔다고 자동으로 서비스에 접속하지 않습니다. 대응 분류가 없으면 미매핑 설명을 유지하고 공식 번호를 만들어내서는 안 됩니다. [OASF discovery](https://docs.agntcy.org/oasf/discovery-extension/)
 
@@ -190,6 +190,6 @@ Grok Team Bot 공개 문서는 개인 정기 작업을 생성자에게 귀속시
 | 두 검토 슬롯이 같은 실제 실행 주체에 바인딩 | independent=true를 만족하지 않음 |
 | 자문역이 특정 검토에만 참여 | 모든 그룹 가입·전체 기록 읽기·새 직원 복제를 자동 수행하지 않음 |
 | 일정에 트리거가 없거나 정책이 불완전 | 미준비 일정으로 유지하고 활성화하지 않음 |
-| OASF 분류를 모르거나 Agent Spec 패턴이 동등하지 않음 | 미지원／매핑 차이를 보고하고 전면 호환을 선언하지 않음 |
+| OASF 분류를 모르거나 Agent Spec 협업 패턴 또는 인터페이스 제약이 동등하지 않음 | 미지원／매핑 차이를 보고하고 전면 호환을 선언하지 않음 |
 
 이 명세가 선언하는 것은 구조와 동작 계약입니다. 원고 검사·예제 검사·실제 연결／모델 실행·독립 구현 상호운용·업계 채택은 각각 보고합니다. 검증 범위와 구현 보고서 요구는 [적합성 설명](../CONFORMANCE.md)을 참조하십시오.

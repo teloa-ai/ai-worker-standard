@@ -52,13 +52,13 @@ Resource.requires 只引用同一定義的 resources，省略視為空。固定�
 
 `ParticipantRef` 是 `self`、`member/<LocalId>` 或 `authority/<LocalId>`。self 指當前定義對應的實例；member 只指當前 organization 的直接 Member 槽位，包括按任務參與的 consultant；authority 指當前 data.authorityRoles。agent 不得使用 member 引用。所有引用必須存在，不能按名稱猜測。responsible 必須是 self 或 member；外部人員可負責驗收和升級，不被偽裝成 AI 執行者。organization 使用 self 時，表示組合體負責對外交付，宿主仍須記錄實際執行者、輸入分發與輸出彙整的承擔者，不能以組織名義代替實際貢獻者。
 
-**Acceptance** 含 `criteria:非空字串陣列、reviewer:ParticipantRef、independent:boolean`。criteria 為可檢查的完成要求；reviewer 是驗收職責位置。independent=true 時，宿主必須證明實際複核主體與被審成果的實際執行主體不同；複合成果須核對實際貢獻者，不能只比較主要負責者或團隊名義身分。兩個槽位、兩個工作階段或兩個名稱都不構成獨立性證明。獨立主體也不自動證明判斷品質。驗收記錄固定採用的成果版本；結構驗證通過、模型完成和業務採用分別記錄。
+**Acceptance** 含 `criteria:非空字串陣列、reviewer:ParticipantRef、independent:boolean`。criteria 為可檢查的完成要求；reviewer 是驗收職責位置。independent=true 時，宿主必須證明實際複核主體與被審成果的實際執行主體不同；複合成果須核對實際貢獻者，不能只比較主要負責者或團隊名義身分。兩個槽位、兩個工作階段或兩個名稱都不構成獨立性證明。獨立主體也不自動證明判斷品質。驗收記錄固定被審的成果版本；結構驗證通過、模型完成和業務採用分別記錄。
 
 inputs、outputs 的根必須為 `type:object`，並聲明 `$schema = https://json-schema.org/draft/2020-12/schema`。重用 [JSON Schema 2020-12](https://json-schema.org/draft/2020-12) 的標準詞彙，不自建類型語言。Schema 可以包含說明及 `$defs`；所有引用（含 `$ref`、`$dynamicRef`）只能指向本 Schema 文件，不允許借巢狀 `$id` 改變引用的文件邊界。匯入不連線至網路解析引用。實現須報告不支援的詞彙或約束，不得忽略後稱驗證通過。format 如用於關鍵驗收，須顯式聲明並驗證相應格式檢查能力。
 
 輸入缺項時報告待補充；輸出缺項或類型不符時不能聲明符合該成果契約。不隱式把字串轉數值、截斷小數或把 false 轉為 0。Schema default 是描述，不自動代表使用者提供或授權了該值。自由文字成果可以放在字串欄位中；業務證據與判斷品質仍由 acceptance 檢查。
 
-**依賴檢查：**先滿足核心 capabilities 及其 R05/R06 條件，再取 data.requires、memoryPolicyRef 和所選 Work.requires 的並集，遞迴展開 Resource.requires。缺失引用或資源依賴循環是定義錯誤。缺少連線、權限或解釋器是相應工作未就緒；其他工作的專用資源未設定不阻塞當前工作。整體必要依賴缺失仍阻塞整體執行。解析支援、設定就緒與實際授權分別報告，不能將局部可用聲明為全部可執行。
+**依賴檢查：**先滿足核心 capabilities 及其 R05/R06 條件，再取 data.requires、memoryPolicyRef、governance.changePolicyRef（如存在）和所選 Work.requires 的並集，遞迴展開 Resource.requires。缺失引用或資源依賴循環是定義錯誤。缺少連線、權限或解釋器是相應工作未就緒；其他工作的專用資源未設定不阻塞當前工作。整體必要依賴缺失仍阻塞整體執行。解析支援、設定就緒與實際授權分別報告，不能將局部可用聲明為全部可執行。
 
 ## 4. 例行與經驗
 
@@ -92,7 +92,7 @@ Handoff.inputs 的鍵是接收工作輸入物件的頂層欄位名，值是發�
 
 每次實際交接固定來源工作/Run、成果版本、發送與接收主體、映射後的材料、允許範圍和接收/拒收結果。接收方確認並建立工作歸屬後才算交接完成。只傳契約所需且已授權的材料，不隱式轉交整個工作階段、私人記憶或連線憑據。群組中發送訊息與交接成功分別記帳。
 
-**Sharing** 含 `resource:LocalId、recipients:非空 ParticipantRef 陣列`。resource 引用當前 resources，接收者只能為當前 member；是否可見及具體版本仍由宿主授權。sharing 不是權限授予，也不會把共享資源自動變成所有成員的必要依賴；工作需要時須由接收工作輸入或其依賴明確承接。
+**Sharing** 含 `resource:LocalId、recipients:非空 ParticipantRef 陣列`。resource 引用當前 resources，接收者只能為當前組合體的直接 Member 槽位，即 `member/<LocalId>`，包括 consultant 槽位；是否可見及具體版本仍由宿主授權。sharing 不是權限授予，也不會把共享資源自動變成所有成員的必要依賴；工作需要時須由接收工作輸入或其依賴明確承接。
 
 **StopPolicy** 含 `maxHops:正整數、maxNoProgress:正整數、escalateTo:ParticipantRef`。計數作用於同一次工作及其衍生交接鏈，不因換員工或重試歸零。maxHops 限制交接次數；maxNoProgress 限制連續沒有新增可驗證證據或沒有已聲明驗收項改善的輪次。達到任一限制時停止繼續派工並升級；恢復須有可信主體的明確處理和新記錄。具體數值由場景設定，不是員工能力評分。
 
@@ -127,7 +127,7 @@ AI Team 使用協作契約；本版 AI Organization 定義還必須具備 govern
 
 ## 7. OASF 與 Agent Spec 的實際吸收邊界
 
-OASF discovery 作為獨立擴展承載，使用固定版本的原生 discovery Schema URI 作為 id、相同的 schema_version 作為 version，原生 payload 原樣置於 data。僅作發現資訊時 required=false；用於不可忽略的執行選擇條件時必須聲明 required=true 並驗證其語義，分類本身仍不授予權限。wrapper 是本規範的映射方式，不是原生 A2A 請求主體。
+OASF discovery 作為獨立擴展承載，使用固定版本的原生 discovery Schema URI 作為 id、相同的 schema_version 作為 version，原生 payload 原樣置於 data。僅作發現資訊時 required=false；用於不可忽略的執行選擇條件時必須聲明 required=true 並驗證其語義，分類本身仍不授予權限。此處使用本規範的 Extension 包裝；它不同於 A2A Agent Card 中的 AgentExtension 包裝。兩種格式均可承載原生 OASF discovery payload，但其包裝欄位不能直接混用。
 
 例如原生 payload 的 `schema_version、skills、domains` 保持原名和含義。skills 是能力類別，domains 是領域；只有固定目錄中真實存在的條目才可聲明 OASF 分類驗證通過。宿主可離線使用可信的固定 Schema/分類快照，不因匯入 URI 自動存取服務。沒有對應分類時保留未映射說明，不編造官方編號。[OASF discovery](https://docs.agntcy.org/oasf/discovery-extension/)
 
@@ -190,6 +190,6 @@ Grok Team Bot 的公開文件將個人例行歸屬於建立者，連線也可能
 | 兩個複核槽位綁定同一實際執行主體 | independent=true 不滿足 |
 | 顧問只參與某項複核 | 不自動加入全部群組、讀取全部歷史或複製新員工 |
 | 計劃缺觸發或策略不完整 | 保留為未就緒安排，不啟用 |
-| OASF 分類未知或 Agent Spec 模式不等價 | 報告不支援/映射差異，不宣稱全面相容 |
+| OASF 分類未知或 Agent Spec 協作模式或介面約束不等價 | 報告不支援/映射差異，不宣稱全面相容 |
 
 本規範聲明的是結構與行為契約。文稿檢查、範例檢查、真實連線/模型執行、獨立實現互通和產業採用分別報告。驗證範圍與實現報告要求見[符合性說明](../CONFORMANCE.md)。

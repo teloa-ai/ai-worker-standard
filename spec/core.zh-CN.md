@@ -143,7 +143,7 @@ YAML 注释不进入交换语义；权限、限制与验收不能只写在注释
 
 OASF discovery 数据按固定版本原样承载，详见附录 §7。可由此导出发现记录，不建立另一套同义能力分类。[OASF Record Guide](https://docs.agntcy.org/oasf/agent-record-guide/) · [Discovery Extension](https://docs.agntcy.org/oasf/discovery-extension/)
 
-Agent Spec 的组件引用采用配置内的 `$component_ref`；输入输出基于 JSON Schema，Swarm 与 ManagerWorkers 则带有具体协作行为。本版保留跨文件的 id＋revision，并把责任交接、会话转交与权限分别处理。转换时须验证实际模式；不默认共享整个会话，不隐式转换输入输出类型。[Agent Spec 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
+Agent Spec 的组件引用采用配置内的 `$component_ref`；输入输出基于 JSON Schema，Swarm 与 ManagerWorkers 则带有具体协作行为。本版保留跨文件的 id＋revision，并把责任交接、会话转交与权限分别处理。转换时须验证实际输入输出约束与协作行为；不默认共享整个会话，不隐式转换输入输出类型。[Agent Spec 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
 
 借鉴定义、保留原生数据和通过兼容验证是不同声明。吸收这些设计不代表已兼容所有 OASF 模块或 Agent Spec 运行时。[Grok 设计说明](https://x.ai/news/designing-grok-bot) · [Team Bots](https://docs.x.ai/grok-bot/team-bots)
 
@@ -350,7 +350,7 @@ URI 均为绝对 URI 或 URN；Digest 为 `sha256:` 加 64 位小写十六进制
 | 编号 | 输入或操作 | 必须观察到的结果 |
 | --- | --- | --- |
 | T01 | 重复键、未知核心字段、非法 kind／类型、未知核心版本 | 拒绝或明确报告版本不支持 |
-| T02 | 导入第 4、5 节以及含未知扩展的有效定义，再导出 | JSON 值保持不变；不同成员的同名能力不合并 |
+| T02 | 导入第 4、5 节示例、含未知扩展的有效定义，以及成员各自声明同名能力的组合定义连同其成员定义，再导出 | JSON 值保持不变；不同成员的同名能力不合并 |
 | T03 | 相同 id／revision 的值不同；另比较键序、空白、10 与 10.0、省略数组与显式空数组 | 按 R02 判断；仅值不同才冲突，不能覆盖；省略与空数组冲突，改值须新 revision |
 | T04 | A → B → C 嵌套引用；引用缺失、修订不符、循环或仅大小写不同；C 缺必要能力或 required 扩展 | 引用错误定位并停止装配，不自动联网或归一化补齐；C 缺项时 A 不得声称完整支持，按 R05／R06 限制执行 |
 | T05 | 未知 optional／required 扩展；已支持的约束扩展非法标为 optional | 未知项均保留并报告，required 阻止装配、执行和完整支持声明；已知非法约束同样拒绝且不得标为校验通过，允许带错误报告保留原文件 |
@@ -364,7 +364,7 @@ URI 均为绝对 URI 或 URN；Digest 为 `sha256:` 加 64 位小写十六进制
 
 当前保留一份共同工作应用规范，表达 Worker、Team 与 Organization 的工作合同及必要宿主要求。记忆内容、真实排程、账号身份和组织管理由宿主实现；新互通需求再评估扩展。新协议可用 required URI 扩展接入，无需全部加入核心枚举。
 
-首个演示可使用本地目录，每份定义一个 JSON 文件，按内容中的 id／revision 建索引，文件名不承担语义；这是示例交付方式，不是新增的分发协议。配上嵌套、缺失和冲突反例及预期结果，再用两个独立实现核对校验、导入和导出行为。随后选一个实际需要的能力绑定，验证“导入 → 配置连接／授权 → 执行 → 取得成果”。未完成此路径前，不扩大为通用运行、支付或生命管理标准。
+首个演示可使用本地目录，每份定义一个 JSON 文件，按内容中的 id／revision 建索引，文件名不承担语义；这是示例交付方式，不是新增的分发协议。配上嵌套、缺失和冲突反例及预期结果，再用两个独立实现核对校验、导入和导出行为。随后选一个实际需要的能力绑定，验证“导入 → 配置连接／授权 → 执行 → 取得成果”。未完成此路径前，不扩大为通用运行、支付或生命周期管理标准。
 
 规范版本升级必须重新校验、更新 specVersion 和附录版本，并生成新 revision；成员引用同步固定。旧定义与旧 Run 不原地改写。不同规范版本不自动兼容；语义变更须提供迁移说明，见[维护规则](../GOVERNANCE.md)。
 

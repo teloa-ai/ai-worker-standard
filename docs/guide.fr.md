@@ -40,7 +40,7 @@ Les flèches représentent des correspondances conceptuelles : Teloa conserve l�
 | --- | --- | --- |
 | **Poste et responsabilités** | Identité durable, mission, limites des responsabilités, règles de décision autonome, confirmation et escalade | Résumer les matériaux existants ; signaler les contradictions sans inventer des faits pour l’auteur |
 | **Méthodes et fondements** | Skills pour les méthodes, connaissances pour les éléments de jugement, SOP pour les étapes, points de contrôle et exceptions ; provenance et version conservées séparément | Utiliser les matériaux de la tâche ; ajouter Skills, connaissances ou SOP pour des travaux plus complexes |
-| **Travaux et organisation** | Contrat précisant objectif, entrées, sorties, dépendances, position responsable et réception ; routines précisant quand appeler quel travail | Fournir `summarize` ; exécuter à réception d’une tâche, sans routine pour l’instant |
+| **Travaux et planification** | Contrat précisant objectif, entrées, sorties, dépendances, position responsable et réception ; routines précisant quand appeler quel travail | Fournir `summarize` ; exécuter à réception d’une tâche, sans routine pour l’instant |
 | **Conditions d’exécution** | Besoins applicatifs et outils, périmètre des matériaux, autorisation valide, modèle, budget et espace d’exécution | Lire uniquement les matériaux fournis sous autorisation ; confirmer séparément toute publication externe |
 | **Expérience et résultats** | Règles de mémoire pour conservation, utilisation et retrait de l’expérience ; versions fixes des résultats et preuves, réception selon les exigences | Produire synthèse et questions ouvertes ; le responsable vérifie la fidélité au texte source |
 
@@ -145,7 +145,7 @@ La définition du Worker ressemble à la fiche de poste et au contrat de travail
 | Livraison | Enregistrement de réception | Qui a vérifié quelle version selon quelles exigences et avec quelle conclusion ; vérifier aussi les contributeurs réels si l’indépendance est requise |
 | Décision métier | Enregistrement d’adoption | Décision du responsable d’utiliser ou non le résultat ; adoption et réception distinctes, sans autorisation automatique de publication ou d’intervention |
 
-Par exemple, « poste de synthèse, révision 2 » est une définition ; l’« organisateur de matériaux » créé à partir d’elle est une instance ; les synthèses de cette semaine et de la suivante sont deux tâches ayant chacune Run et résultat. Mettre à jour le modèle ne réécrit pas les anciens Runs et ne réattribue pas les anciens résultats au nouvel employé.
+Par exemple, « poste de synthèse, révision 2 » est une définition ; l’« organisateur de matériaux » créé à partir d’elle est une instance ; les synthèses de cette semaine et de la suivante sont deux tâches ayant chacune Run et résultat. Mettre à jour le modèle de poste ne réécrit pas les anciens Runs et ne réattribue pas les anciens résultats au nouvel employé.
 
 Le noyau ne conserve que `agent` et `organization`. Un Worker utilise `agent` avec l’extension de travail obligatoire ; une Team, `organization` avec contrat de collaboration ; une Org ajoute la gouvernance. Les mêmes règles de référence et de version permettent ainsi la composition, sans nouveau type de fichier pour chaque nom produit.
 

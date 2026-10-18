@@ -44,7 +44,7 @@ The arrows map concepts: Teloa retains AI employee as its product concept, and G
 
 A memory store, external application and schedule are optional. Dependencies follow the work promised. External research needs a connection and authorization; summarizing supplied text does not need an application added merely to complete a checklist.
 
-A complete Worker definition requires identity and revision, responsibilities and decision boundaries, and at least one work contract with inputs, outputs, a responsible position and acceptance. Actual use also requires the host to bind a specific instance, execution conditions and trusted authorization. The five groups organize identity, responsibility, Skills, knowledge, SOPs, work templates, routines, applications, permissions, runtime conditions, experience, and deliverables and quality. The [work profile](../spec/work-profile.zh-CN.md) specifies the fields.
+A complete Worker definition requires identity and revision, responsibilities and decision boundaries, and at least one work contract with inputs, outputs, a responsible position and acceptance. Actual use also requires the host to bind a specific instance, execution conditions and trusted authorization. The five groups organize identity, responsibility, Skills, knowledge, SOPs, work templates, routines, applications, permissions, runtime conditions, experience, and deliverables and quality. The [work profile](../spec/work-profile.en.md) specifies the fields.
 
 ## 02 A team needs traceable handoffs
 

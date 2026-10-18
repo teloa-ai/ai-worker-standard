@@ -147,7 +147,7 @@ YAML 註解不進入交換語義；權限、限制與驗收不能只寫在註解
 
 OASF discovery 資料按固定版本原樣承載，詳見附錄 §7。可由此匯出發現記錄，不建立另一套同義能力分類。[OASF Record Guide](https://docs.agntcy.org/oasf/agent-record-guide/) · [Discovery Extension](https://docs.agntcy.org/oasf/discovery-extension/)
 
-Agent Spec 的元件引用採用設定內的 `$component_ref`；輸入輸出基於 JSON Schema，Swarm 與 ManagerWorkers 則帶有具體協作行為。本版保留跨檔案的 id＋revision，並把責任交接、工作階段轉交與權限分別處理。轉換時須驗證實際模式；不預設共享整個工作階段，不隱式轉換輸入輸出類型。[Agent Spec 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
+Agent Spec 的元件引用採用設定內的 `$component_ref`；輸入輸出基於 JSON Schema，Swarm 與 ManagerWorkers 則帶有具體協作行為。本版保留跨檔案的 id＋revision，並把責任交接、工作階段轉交與權限分別處理。轉換時須驗證實際輸入輸出約束與協作行為；不預設共享整個工作階段，不隱式轉換輸入輸出類型。[Agent Spec 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
 
 借鏡定義、保留原生資料和通過相容驗證是不同聲明。吸收這些設計不代表已相容所有 OASF 模組或 Agent Spec 執行環境。[Grok 設計說明](https://x.ai/news/designing-grok-bot) · [Team Bots](https://docs.x.ai/grok-bot/team-bots)
 
@@ -274,7 +274,7 @@ Agent Spec 的元件引用採用設定內的 `$component_ref`；輸入輸出基�
 | revision | 必需，非空字串，不得為 latest | 固定內容，避免引用悄悄變化 |
 | kind | 必需，agent 或 organization | 區分單體與組合 |
 | name | 必需，非空字串 | 讓人能夠辨識和分享 |
-| instructions | 必需，非空字串 | 表達AI Agent職責或組織協作要求 |
+| instructions | 必需，非空字串 | 表達 agent 個體職責或組織協作要求 |
 | capabilities | 選用，Capability 陣列，僅 agent 可用 | 引用所需的外部能力 |
 | members | organization 必需的非空 Member 陣列；agent 不得使用 | 表達組織組成 |
 | extensions | 選用，Extension 陣列 | 容納核心以外的語義 |
@@ -301,7 +301,7 @@ Selector 僅為 `{"type":"tool"或"prompt","name":非空字串}` 或 `{"type":"r
 
 URI 均為絕對 URI 或 URN；Digest 為 `sha256:` 加 64 位小寫十六進位字元。協定版本必須精確，不得為範圍或 latest。連線名、Card 位址及套件位置均不代表授權。
 
-範例：把下面條目放入AI Agent的 capabilities 陣列，表示它需要這個 MCP 連線。範例連線與版本仍須在實際部署中驗證。
+範例：把下面條目放入 agent 個體的 capabilities 陣列，表示它需要這個 MCP 連線。範例連線與版本仍須在實際部署中驗證。
 
 ```json
 {
@@ -335,7 +335,7 @@ URI 均為絕對 URI 或 URN；Digest 為 `sha256:` 加 64 位小寫十六進位
 
 **R04 組合不合併權限。** 成員分別使用各自定義與能力。組織 instructions 描述協作要求，不覆蓋成員 instructions，也不自動給成員增加工具或權限；衝突未解決時不得啟動受影響工作。同名能力按所屬成員區分，不能合併連線。核心不定義排程、提示詞合併或實際身分分配。
 
-**R05 聲明必須兌現。** capabilities 中每個條目都是該AI Agent聲明的必要依賴；沒有「預設可忽略」的綁定。無法提供某項時，必須列出缺項，不得按該定義啟動或聲稱完整支援；組織也不得繞過缺項的必需成員執行。仍可查看和保存，刪改能力須生成新 revision。實際執行須核實原生支援和授權，讀取成功不等於可執行。
+**R05 聲明必須兌現。** capabilities 中每個條目都是該 agent 個體聲明的必要依賴；沒有「預設可忽略」的綁定。無法提供某項時，必須列出缺項，不得按該定義啟動或聲稱完整支援；組織也不得繞過缺項的必需成員執行。仍可查看和保存，刪改能力須生成新 revision。實際執行須核實原生支援和授權，讀取成功不等於可執行。
 
 附錄的 resources 是可按工作選用的目錄，不等於 capabilities。整體條件與所選工作的必要條件都須滿足；其他工作獨有的未就緒資源只阻塞那些工作。完整支援、特定工作就緒和獲得實際授權分別報告，不能利用應用規範繞過本條的整體依賴要求。
 
@@ -354,7 +354,7 @@ URI 均為絕對 URI 或 URN；Digest 為 `sha256:` 加 64 位小寫十六進位
 | 編號 | 輸入或操作 | 必須觀察到的結果 |
 | --- | --- | --- |
 | T01 | 重複鍵、未知核心欄位、非法 kind／類型、未知核心版本 | 拒絕或明確報告版本不支援 |
-| T02 | 匯入第 4、5 節以及含未知擴展的有效定義，再匯出 | JSON 值保持不變；不同成員的同名能力不合併 |
+| T02 | 匯入第 4、5 節示例、含未知擴展的有效定義，以及成員各自聲明同名能力的組合定義連同其成員定義，再匯出 | JSON 值保持不變；不同成員的同名能力不合併 |
 | T03 | 相同 id／revision 的值不同；另比較鍵序、空白、10 與 10.0、省略陣列與顯式空陣列 | 按 R02 判斷；僅值不同才衝突，不能覆蓋；省略與空陣列衝突，改值須新 revision |
 | T04 | A → B → C 巢狀引用；引用缺失、修訂不符、循環或僅大小寫不同；C 缺必要能力或 required 擴展 | 引用錯誤定位並停止裝配，不自動連線至網路或正規化補齊；C 缺項時 A 不得聲稱完整支援，按 R05／R06 限制執行 |
 | T05 | 未知 optional／required 擴展；已支援的約束擴展非法標為 optional | 未知項均保留並報告，required 阻止裝配、執行和完整支援聲明；已知非法約束同樣拒絕且不得標為驗證通過，允許帶錯誤報告保留原檔案 |
@@ -362,7 +362,7 @@ URI 均為絕對 URI 或 URN；Digest 為 `sha256:` 加 64 位小寫十六進位
 
 綁定和宿主的真實執行另驗：至少核對必要能力缺失時不啟動、實際授權、組織組合隔離，以及原生失敗和未知結果。它們不由 JSON 檢查冒充通過。
 
-不強制所有宿主共用一套錯誤程式碼或內部狀態機，但錯誤必須定位物件並說明原因。不同實現應在上述接受／拒絕和保留行為上得到一致結果。
+不強制所有宿主共用一套錯誤代碼或內部狀態機，但錯誤必須定位物件並說明原因。不同實現應在上述接受／拒絕和保留行為上得到一致結果。
 
 ## 10. 演進與落地邊界
 
