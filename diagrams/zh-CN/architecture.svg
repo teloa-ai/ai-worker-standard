@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1070" viewBox="0 0 1200 1070" role="img" aria-label="从可交换定义，到实际运行与验收"><title>从可交换定义，到实际运行与验收</title><desc>标准描述工作合同；宿主落实实例、资料、连接、授权和执行。</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#2f6b52" stroke-width="1.5"/></marker><marker id="amber" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#8d6021" stroke-width="1.5"/></marker></defs><g font-family="Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, Arial, sans-serif"><rect width="1200" height="1070" fill="#f7f9f6"/>
+<text x="56" y="53" fill="#2f6b52" font-size="17" font-weight="650" text-anchor="start"><tspan x="56" dy="0">03 / TECHNICAL ARCHITECTURE</tspan></text>
+<text x="1144" y="53" fill="#526b5e" font-size="16" font-weight="500" text-anchor="end"><tspan x="1144" dy="0">AI WORKER STANDARD 1.0</tspan></text>
+<text x="56" y="116" fill="#223b30" font-size="40" font-weight="650" text-anchor="start"><tspan x="56" dy="0">从可交换定义，到实际运行与验收</tspan></text>
+<text x="56" y="160" fill="#526b5e" font-size="23" font-weight="400" text-anchor="start"><tspan x="56" dy="0">标准描述工作合同；宿主落实实例、资料、连接、授权和执行。</tspan></text>
+<path d="M56 192 H1144" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="56" y="234" width="336" height="574" rx="18" fill="#e9f1eb" stroke="#e9f1eb" stroke-width="1.5"/>
+<text x="80" y="278" fill="#2f6b52" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">01  定义层</tspan></text>
+<rect x="432" y="234" width="336" height="574" rx="18" fill="#e9f1eb" stroke="#e9f1eb" stroke-width="1.5"/>
+<text x="456" y="278" fill="#2f6b52" font-size="25" font-weight="650" text-anchor="start"><tspan x="456" dy="0">02  宿主执行层</tspan></text>
+<rect x="808" y="234" width="336" height="574" rx="18" fill="#e9f1eb" stroke="#e9f1eb" stroke-width="1.5"/>
+<text x="832" y="278" fill="#2f6b52" font-size="25" font-weight="650" text-anchor="start"><tspan x="832" dy="0">03  交付层</tspan></text>
+<rect x="72" y="312" width="304" height="115" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="96" y="350" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="96" dy="0">核心定义</tspan></text>
+<text x="96" y="384" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="96" dy="0">id / revision / kind</tspan><tspan x="96" dy="26">成员固定引用</tspan></text>
+<rect x="72" y="459" width="304" height="192" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="96" y="497" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="96" dy="0">必需工作扩展</tspan></text>
+<text x="96" y="531" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="96" dy="0">职责 · 输入输出</tspan><tspan x="96" dy="26">依赖 · 协作</tspan><tspan x="96" dy="26">成果验收</tspan></text>
+<text x="96" y="714" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="96" dy="0">JSON 规范性交换</tspan><tspan x="96" dy="29">YAML 可选编写入口</tspan></text>
+<rect x="448" y="312" width="304" height="115" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="472" y="350" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="472" dy="0">合同与能力校验</tspan></text>
+<text x="472" y="384" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="472" dy="0">引用 · 合同 · 必要能力</tspan></text>
+<rect x="448" y="459" width="304" height="115" rx="16" fill="#223b30" stroke="#223b30" stroke-width="1.5"/>
+<text x="472" y="497" fill="#ffffff" font-size="25" font-weight="650" text-anchor="start"><tspan x="472" dy="0">实例绑定与授权</tspan></text>
+<text x="472" y="531" fill="#d4e5da" font-size="20" font-weight="400" text-anchor="start"><tspan x="472" dy="0">实例 · 资料 · 模型</tspan><tspan x="472" dy="26">实际连接 · 授权范围</tspan></text>
+<rect x="448" y="606" width="304" height="155" rx="16" fill="#223b30" stroke="#223b30" stroke-width="1.5"/>
+<text x="472" y="644" fill="#ffffff" font-size="25" font-weight="650" text-anchor="start"><tspan x="472" dy="0">一次 Run</tspan></text>
+<text x="472" y="678" fill="#d4e5da" font-size="20" font-weight="400" text-anchor="start"><tspan x="472" dy="0">固定输入版本</tspan><tspan x="472" dy="26">有效授权</tspan><tspan x="472" dy="26">实际执行主体</tspan></text>
+<rect x="824" y="312" width="304" height="115" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="848" y="350" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="848" dy="0">固定成果</tspan></text>
+<text x="848" y="384" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="848" dy="0">成果内容与版本</tspan><tspan x="848" dy="26">实际贡献者</tspan></text>
+<rect x="824" y="459" width="304" height="115" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="848" y="497" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="848" dy="0">验收记录</tspan></text>
+<text x="848" y="531" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="848" dy="0">依据明确验收要求</tspan><tspan x="848" dy="26">针对指定成果版本</tspan></text>
+<rect x="824" y="606" width="304" height="155" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="848" y="644" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="848" dy="0">业务采用</tspan></text>
+<text x="848" y="678" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="848" dy="0">由负责人明确决定</tspan><tspan x="848" dy="26">与验收分别记录</tspan><tspan x="848" dy="26">不自动批准对外动作</tspan></text>
+<path d="M376 369 H408 M376 555 H408 V369" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M408 369 H448" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M600 427 V459" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M600 574 V606" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M752 685 H788 V369 H824" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M976 427 V459" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M976 574 V606" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="56" y="848" width="1088" height="104" rx="14" fill="#f7efdf" stroke="#f7efdf" stroke-width="1.5"/>
+<text x="80" y="886" fill="#8d6021" font-size="24" font-weight="650" text-anchor="start"><tspan x="80" dy="0">关键合同或能力不受支持时</tspan></text>
+<text x="80" y="922" fill="#8d6021" font-size="22" font-weight="400" text-anchor="start"><tspan x="80" dy="0">保留定义、报告缺项，将受影响工作标为未就绪。</tspan></text>
+<path d="M56 984 H1144" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="56" y="1025" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="56" dy="0">导入定义不会自动连接账号、授予权限、启动执行或启用例行。</tspan></text>
+</g></svg>

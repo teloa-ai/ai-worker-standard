@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1060" viewBox="0 0 1200 1060" role="img" aria-label="From Workers to Teams and an Org"><title>From Workers to Teams and an Org</title><desc>Composition adds shared delivery and governance; it does not pool all permissions.</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#2f6b52" stroke-width="1.5"/></marker><marker id="amber" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#8d6021" stroke-width="1.5"/></marker></defs><g font-family="Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, Arial, sans-serif"><rect width="1200" height="1060" fill="#f7f9f6"/>
+<text x="56" y="53" fill="#2f6b52" font-size="17" font-weight="650" text-anchor="start"><tspan x="56" dy="0">02 / ORGANIZATIONAL COMPOSITION</tspan></text>
+<text x="1144" y="53" fill="#526b5e" font-size="16" font-weight="500" text-anchor="end"><tspan x="1144" dy="0">AI WORKER STANDARD 1.0</tspan></text>
+<text x="56" y="116" fill="#223b30" font-size="40" font-weight="650" text-anchor="start"><tspan x="56" dy="0">From Workers to Teams and an Org</tspan></text>
+<text x="56" y="160" fill="#526b5e" font-size="23" font-weight="400" text-anchor="start"><tspan x="56" dy="0">Composition adds shared delivery and governance; it does not pool all permissions.</tspan></text>
+<path d="M56 192 H1144" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="280" y="234" width="640" height="137" rx="16" fill="#223b30" stroke="#223b30" stroke-width="1.5"/>
+<text x="304" y="268" fill="#bfd8c8" font-size="16" font-weight="650" text-anchor="start"><tspan x="304" dy="0">GOVERNANCE</tspan></text>
+<text x="304" y="306" fill="#ffffff" font-size="25" font-weight="650" text-anchor="start"><tspan x="304" dy="0">AI Organization</tspan></text>
+<text x="304" y="340" fill="#d4e5da" font-size="22" font-weight="400" text-anchor="start"><tspan x="304" dy="0">Accountability · Resources · Change rules</tspan></text>
+<path d="M600 371 V400 H310 V435" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M600 400 H890 V435" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<rect x="56" y="435" width="508" height="151" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="80" y="473" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">AI Team A</tspan></text>
+<text x="80" y="507" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="80" dy="0">Shared output · Role assignments</tspan><tspan x="80" dy="26">Handoffs · Acceptance</tspan></text>
+<rect x="636" y="435" width="508" height="151" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="660" y="473" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="660" dy="0">AI Team B</tspan></text>
+<text x="660" y="507" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="660" dy="0">Shared output · Role assignments</tspan><tspan x="660" dy="26">Handoffs · Acceptance</tspan></text>
+<path d="M215 586 V698" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M985 586 V698" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M564 512 H600 V698" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
+<path d="M636 512 H600" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 7"/>
+<rect x="490" y="618" width="220" height="40" rx="4" fill="#f7f9f6" stroke="#f7f9f6" stroke-width="1.5"/>
+<text x="600" y="646" fill="#2f6b52" font-size="19" font-weight="500" text-anchor="middle"><tspan x="600" dy="0">Per-task participation</tspan></text>
+<rect x="56" y="698" width="320" height="175" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="80" y="732" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="80" dy="0">TEAM A WORK</tspan></text>
+<text x="80" y="770" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">AI Worker</tspan></text>
+<text x="80" y="804" fill="#526b5e" font-size="22" font-weight="400" text-anchor="start"><tspan x="80" dy="0">Triage and</tspan><tspan x="80" dy="28.6">investigation</tspan></text>
+<rect x="824" y="698" width="320" height="175" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="848" y="732" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="848" dy="0">TEAM B WORK</tspan></text>
+<text x="848" y="770" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="848" dy="0">AI Worker</tspan></text>
+<text x="848" y="804" fill="#526b5e" font-size="22" font-weight="400" text-anchor="start"><tspan x="848" dy="0">Detection</tspan><tspan x="848" dy="28.6">engineering</tspan></text>
+<rect x="414" y="698" width="372" height="175" rx="16" fill="#e9f1eb" stroke="#2f6b52" stroke-width="1.5"/>
+<text x="440" y="734" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="440" dy="0">SHARED INSTANCE</tspan></text>
+<text x="440" y="774" fill="#223b30" font-size="27" font-weight="650" text-anchor="start"><tspan x="440" dy="0">Quality Worker</tspan></text>
+<text x="440" y="814" fill="#526b5e" font-size="22" font-weight="400" text-anchor="start"><tspan x="440" dy="0">One Worker, separate</tspan><tspan x="440" dy="31.9">authorized work contexts.</tspan></text>
+<path d="M56 926 H100" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="114" y="933" fill="#526b5e" font-size="21" font-weight="400" text-anchor="start"><tspan x="114" dy="0">Composition / assigned work</tspan></text>
+<path d="M620 926 H664" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 7"/>
+<text x="678" y="933" fill="#526b5e" font-size="21" font-weight="400" text-anchor="start"><tspan x="678" dy="0">Consultant participation</tspan></text>
+<path d="M56 974 H1144" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="56" y="1015" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="56" dy="0">Illustrative composition. Reusing a template does not establish a shared live instance.</tspan></text>
+</g></svg>
