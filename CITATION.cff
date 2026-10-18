@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this standard, please cite both founding authors."
+title: "AI Worker Standard 1.0"
+authors:
+  - family-names: Luo
+    given-names: Max
+    affiliation: "Teloa — co-founder"
+  - family-names: Chen
+    given-names: Morgan
+    affiliation: "Teloa — co-founder"
+version: "1.0"
+date-released: 2026-10-18
+url: "https://github.com/teloa-ai/ai-worker-standard"
+repository-code: "https://github.com/teloa-ai/ai-worker-standard"
+license: Apache-2.0
+abstract: >-
+  An open definition standard for AI Workers, AI Teams and AI Organizations,
+  covering persistent identity, work contracts, collaboration and governance.

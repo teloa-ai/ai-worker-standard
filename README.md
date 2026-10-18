@@ -4,48 +4,72 @@
 
 By **Max Luo and Morgan Chen, co-founders of Teloa** · 18 October 2026
 
-[简体中文](README.zh-CN.md) · [Read the illustrated guide](docs/guide.en.md) · [中文图解](docs/guide.zh-CN.md)
+[English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-Hant.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md)
 
-An **AI Worker** is an AI work entity with an identity that persists across tasks, defined responsibilities, an authorization boundary, and deliverables that can be checked. A worker can use several models or temporary agents. It does not need a dedicated machine, a permanent process, or long-term memory.
+An **AI Worker** is an AI work entity with an identity that persists across tasks, defined responsibilities, an authorization boundary, and deliverables that can be checked. In Teloa, the product name is **AI employee**; AI Worker is the underlying standard concept. Grok Bot can also be described using this concept, subject to the mapping checks below.
 
-An **AI Team** combines workers around a shared deliverable, with explicit responsibilities, handoffs and acceptance. An **AI Organization** adds accountability, resource constraints and change governance to a composition of workers and teams.
+## 1. Core concepts
 
-These terms describe working arrangements. They do not confer legal personality or authority to act on someone's behalf.
+| Concept | What it describes | What makes it useful |
+| --- | --- | --- |
+| AI Worker | An identifiable work entity with responsibilities, work contracts and delivery checks | Work remains attributable across tasks, models and temporary agents |
+| AI Team | Members working toward a shared result with explicit roles, handoffs and acceptance | Collaboration has a checkable delivery contract |
+| AI Organization | A composition of workers and teams with organizational accountability, resource boundaries and change governance | Teams can work together under explicit governance |
 
-![Worker, AI Team and AI Org composition, illustrated with Teloa AI employees](diagrams/en/composition.png)
+Persistent identity does not require a dedicated machine, a permanent process or long-term memory. Accountability here means attribution and traceability of work, not legal personality. A chat group or member list alone is not a Team contract.
 
-## What this standard specifies
+## 2. Scope and format
 
-The core format has two kinds: `agent` and `organization`. The required work profile describes responsibilities, work inputs and outputs, dependencies, acceptance and collaboration. A six-field `agent` document alone is a core definition, not a complete Worker definition.
-
-| Read | Purpose |
+| Item | Version 1.0 |
 | --- | --- |
-| [Core specification](spec/core.zh-CN.md) | Identity, immutable revisions, composition, capability references and eight common rules |
-| [Work and collaboration profile](spec/work-profile.zh-CN.md) | Work contracts, handoffs, private routines, instance bindings and governance |
-| [Illustrated guide](docs/guide.en.md) | Architecture and a worked example |
-| [Product mappings](docs/mappings.md) | Teloa, Grok Bot, OASF and Oracle Agent Spec |
-| [Examples](examples/README.md) | Complete Worker JSON/YAML, composed definitions and sample input/output |
-| [Conformance boundaries](CONFORMANCE.md) | What an implementation can claim and what evidence it needs |
-| [Governance](GOVERNANCE.md) | Maintenance, feedback, changes and licensing |
+| Core objects | `agent` and `organization` |
+| Required work profile | `urn:teloa:profile:ai-work`, version `1.0` |
+| Worker / Team / Organization | Worker: core + work profile; Team: add collaboration; Organization: add governance |
+| Exchange | JSON; optional YAML authoring under the restricted conversion rules |
+| Core checks | Eight common rules, R01–R08; six core exchange cases, T01–T06 |
+| Authority | Simplified Chinese core and work profile; full reading translations in seven other languages |
 
-**Version 1.0:** core and work profile; the profile is identified by `urn:teloa:profile:ai-work`. The normative specification is currently in Simplified Chinese. English guides are explanatory; a normative English edition requires a separately reviewed publication.
+The standard defines identities, immutable revisions, references, responsibilities, work interfaces, collaboration and governance. Hosts implement model execution, scheduling, connections and authorization. Importing a definition does not install tools, connect accounts, start work or enable routines. A six-field core `agent` document alone is not a complete AI Worker definition.
 
-JSON is the normative exchange format. YAML is an optional authoring format with a restricted conversion profile. Importing either format does not install tools, connect accounts, start a worker, enable routines or authorize execution.
+## 3. Read the standard
 
-## Where existing products fit
+| Document | Purpose |
+| --- | --- |
+| [Guide with diagrams and searchable text](docs/guide.en.md) | Composition, architecture, delivery workflow and a worked example |
+| [Full core specification](spec/core.en.md) | Fields, fixed revisions, references, common rules and exchange cases |
+| [Full work and collaboration profile](spec/work-profile.en.md) | Work contracts, resources, handoffs, routines, instance bindings and governance |
+| [Examples](examples/README.md) | Complete Worker JSON/YAML, composition fixture and sample input/output |
+| [Product and specification mappings](docs/mappings.md) | Teloa, Grok Bot, OASF and Oracle Agent Spec |
+| [Conformance](CONFORMANCE.md) · [Governance](GOVERNANCE.md) | Evidence boundaries, contribution and maintenance |
+| [All eight languages](docs/languages.md) | Complete reading editions and translation policy |
 
-Teloa’s **AI employee** is the product expression of an **AI Worker**. People create AI employees and form AI teams; Worker definitions and instances describe their identity, responsibilities and work contracts, while Team contracts describe collaboration and delivery. Grok’s **Bot** can also be described as an AI Worker. A conforming mapping requires the definitions and host behavior to satisfy the contracts; the products retain their own names. Grok's **Team Bot** is a shared Bot: it is not, by its name alone, a team of multiple AI Workers. The [mapping guide](docs/mappings.md) explains the distinction and the checks still required.
+Each guide explains the diagrams in text. Full translations retain field names, rule identifiers and JSON examples. Translations are reading editions; they have not undergone complete review by native-language domain experts. The Chinese normative documents resolve interpretation differences. Shared mapping, example and governance documents are in English and/or Chinese as marked in the language index.
 
-OASF contributes discovery metadata and taxonomies. Oracle Agent Spec contributes useful ideas for component references, interfaces and composition. Reusing these ideas is not a claim of complete format or runtime compatibility. The mapping guide links the primary sources and records the boundaries.
+## 4. Start with one complete Worker
 
-## Status and participation
+1. Read the [composition and delivery guide](docs/guide.en.md).
+2. Inspect [document-worker.json](examples/document-worker.json), or its equivalent [YAML](examples/document-worker.yaml). It accepts `material` and returns `summary` and `openQuestions`.
+3. Check its responsibilities, input/output schemas, required resources and acceptance contract; compare the [sample input](examples/document-input.json) and [sample output](examples/document-output.json).
+4. To execute it, bind the definition to a real instance, supported resources and effective authorization in a host. Record output, acceptance and business adoption separately.
 
-This is a **Teloa-maintained open standard**, not an adopted international standard or a certification scheme. There is no claim of endorsement by xAI, AGNTCY, Oracle or a standards organization. Current examples illustrate the contract; they are not a deployment package or proof of cross-platform interoperability.
+The examples are contract examples, not a deployment package or a conformance validator. The composition fixture includes unresolved bindings and is not ready for live execution.
 
-The next interoperability milestone is reproducible exchange testing by two independent implementations, including a non-SOC use case. Contributions should report the exact specification/profile versions, the behavior tested and unsupported requirements.
+## 5. Product names and external specifications
 
-Use [Issues](https://github.com/teloa-ai/ai-worker-standard/issues) for a concrete ambiguity, counterexample or implementation report. Submit wording changes with the affected section and expected behavior. See [GOVERNANCE.md](GOVERNANCE.md).
+Teloa’s **AI employee** remains the user-facing product concept. Its Worker definition describes the role and work contract; a Worker instance identifies a specific AI employee. An AI team uses a Team contract to organize collaboration and delivery.
 
-## License
+Grok’s **Bot** can map to AI Worker. A **Team Bot** shared by people is initially a shared Worker, not automatically a team of multiple Workers. Conformance depends on definitions and host behavior, not the name. See the [mapping guide](docs/mappings.md) for sources and checks.
 
-Original material in this repository is licensed under [Apache-2.0](LICENSE). Product names and linked third-party specifications retain their respective rights. No product account or Teloa service is required to read or implement this standard.
+OASF informs discovery metadata and taxonomies. Oracle Agent Spec informs component references, interfaces and composition. This reuse does not establish complete format or runtime compatibility.
+
+## 6. Status, contribution and citation
+
+This is a **Teloa-maintained open specification**, not an adopted international standard or a certification scheme. No endorsement by xAI, AGNTCY, Oracle or a standards organization is claimed. Independent interoperability requires reproducible evidence from independent implementations.
+
+Submit concrete ambiguities, counterexamples and versioned implementation reports through [Issues](https://github.com/teloa-ai/ai-worker-standard/issues). See [GOVERNANCE.md](GOVERNANCE.md) for changes and [CONFORMANCE.md](CONFORMANCE.md) for claims.
+
+Suggested citation: **Max Luo and Morgan Chen. AI Worker Standard 1.0. Teloa, 2026.** Machine-readable citation: [CITATION.cff](CITATION.cff).
+
+## 7. License
+
+Original material is licensed under [Apache-2.0](LICENSE). Product names and linked third-party specifications retain their respective rights. Reading or implementing this standard requires no Teloa account or service.
