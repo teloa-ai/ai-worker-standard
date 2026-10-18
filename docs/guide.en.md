@@ -10,7 +10,7 @@ The AI Worker standard makes these agreements explicit, so people can check what
 
 This guide introduces **AI Worker Standard 1.0**, including its core and work profile. Examples are teaching material, not customer results or execution evidence. The [Chinese specifications](../spec/core.zh-CN.md) are normative for this edition.
 
-## What makes up an AI employee
+## 01 What makes up an AI employee
 
 Consider an AI employee responsible for document summaries. Its job is to summarize supplied material and list unanswered questions. It can perform this job repeatedly using different models. Each result still belongs to the same AI employee, represented technically by a particular Worker instance, and records the definition revision used.
 
@@ -32,7 +32,7 @@ A memory store, external application and schedule are optional. Dependencies fol
 
 A complete Worker definition requires identity and revision, responsibilities and decision boundaries, and at least one work contract with inputs, outputs, a responsible position and acceptance. The five groups organize the explanation; the work profile specifies the fields.
 
-## A team needs traceable handoffs
+## 02 A team needs traceable handoffs
 
 For a material-review task, an analyst AI employee reads the evidence and a review AI employee checks the conclusions. The team delivers a report and a review. A group chat supports communication; the team contract also specifies the shared deliverable, responsibilities, handoff conditions and stopping rules.
 
@@ -61,7 +61,7 @@ The keys in `inputs` name receiver fields; the values name sender output fields.
 
 In the diagram, the review AI employee contributes a review. The designated owner accepts the complete deliverable. Independence must be checked against actual contributors. A reviewer who edits the report becomes a contributor to that revision and cannot independently accept that same revision.
 
-## What an AI Organization adds
+## 03 What an AI Organization adds
 
 An organization composes teams and workers, with accountability, resource constraints and change rules across them. More members or another group-chat layer does not create those agreements.
 
@@ -75,7 +75,7 @@ The organization also identifies who is accountable, who appoints or removes mem
 
 This is an expressible organization structure. A product needs binding, authorization and execution evidence to establish that it operates that structure. It differs from the downloadable structural fixture: that fixture's A and B teams reuse both the analyst and reviewer to illustrate instance bindings, and do not configure a real detection-engineering role.
 
-## Definition, instance and Run
+## 04 Definition, instance and Run
 
 A Worker definition describes an AI employee’s role and work contracts. A Worker instance corresponds to a particular AI employee in Teloa. A Run is one execution by that employee. A template update preserves the versions used by old Runs; changing a model does not require assigning the worker's history to a new identity.
 
@@ -87,7 +87,7 @@ The core format retains two kinds: `agent` and `organization`. A Worker adds the
 
 The host is the platform operating the definitions, such as Teloa. It binds them to actual instances, materials, connections, models and authorization principals, checks inputs and dependencies, and records execution and artifacts. Importing a definition does not grant access.
 
-## An example you can check field by field
+## 05 An example you can check field by field
 
 The [document-summary Worker](../examples/document-worker.json) is a complete definition. Its `summarize` work takes a nonempty `material` string and returns a nonempty `summary` and an `openQuestions` string array. Below is an English rendering of the hand-written [sample input](../examples/document-input.json) and [output](../examples/document-output.json), not a recorded model response:
 
@@ -111,7 +111,7 @@ Schema validation can catch missing fields and wrong types. The owner still chec
 
 The same relationship applies to SOC work. If teaching material contains only one WAF HTTP 403 record, the report should explain what that record supports and identify missing backend or endpoint evidence. It cannot establish compromise or complete safety. Deeper investigation needs the missing data; containment needs appropriate tools and authorization. This example connects to no live environment and performs no attack.
 
-## Mapping Grok Bot and Teloa
+## 06 Mapping Grok Bot and Teloa
 
 Teloa’s AI employee is the product expression of an AI Worker; Grok Bot can also be described as an AI Worker. AI employee and Bot remain the product concepts. AI Worker supplies a shared technical definition, with responsibilities, work contracts and host behavior checked during adaptation. Grok's public design describes persistent Bots and components such as Skills and Routines. It supports a conceptual comparison, not a claim that a converter or official compatibility certification exists. [Grok design](https://x.ai/news/designing-grok-bot)
 
@@ -128,7 +128,7 @@ Grok's Team Bot documentation describes one Bot used by multiple people. That di
 
 See the [mapping document](mappings.md) for field correspondence and unsupported cases.
 
-## Reusing existing specifications
+## 07 Reusing existing specifications
 
 OASF supplies discovery records, domains and skill taxonomies. The standard preserves that native metadata and its versions, while Work contracts define inputs, outputs and acceptance. A taxonomy skill and an executable Skill package are different objects. [OASF Record Guide](https://docs.agntcy.org/oasf/agent-record-guide/)
 
@@ -136,7 +136,7 @@ Oracle Agent Spec offers useful component-reference, interface and composition d
 
 JSON carries the normative exchange definition. YAML is an optional authoring input with restricted conversion: reject duplicate keys, anchors, aliases, explicit tags, non-finite numbers and multiple documents, and preserve number and string meanings. `revision: "1"` is a string; `revision: 1` fails the field type check. Both files must not become independently editable sources for the same revision.
 
-## Starting with one real job
+## 08 Starting with one real job
 
 Choose an existing job and specify its inputs, outputs, dependencies, responsibility and acceptance. After binding real instances, check the material actually received and the fixed deliverables before expanding to a team. A host that cannot enforce a critical constraint must mark the affected work as not ready.
 
