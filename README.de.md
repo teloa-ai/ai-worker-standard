@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://www.teloa.ai/en/"><img src="assets/brand/teloa-reading.webp" width="120" height="120" alt="Teloa, das lesende Eichhörnchen"></a>
+</p>
+
 # AI Worker Standard 1.0
 
 **Ein offener Definitionsstandard für AI Worker, AI Teams und AI Organizations.**
@@ -5,6 +9,10 @@
 Von **Max Luo und Morgan Chen, Mitgründer von Teloa** · 18. Oktober 2026
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-Hant.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md)
+
+[Website](https://www.teloa.ai/en/) · [Docs](https://docs.teloa.ai/en/) · [Marketplace](https://market.teloa.ai/en/) · [AI Security](https://security.teloa.ai/?lang=en) · [Blog](https://www.teloa.ai/en/blog/) · [Security reports](https://security.teloa.ai/report/?lang=en)
+
+[![Version 1.0](assets/badges/version.svg)](https://github.com/teloa-ai/ai-worker-standard/releases/tag/v1.0) [![8 core rules](assets/badges/core-rules.svg)](spec/core.de.md) [![8 languages](assets/badges/languages.svg)](docs/languages.md) [![License Apache-2.0](assets/badges/license.svg)](LICENSE)
 
 Ein **AI Worker** ist eine KI-Arbeitseinheit mit einer aufgabenübergreifenden Identität, klaren Verantwortlichkeiten, einer Berechtigungsgrenze und überprüfbaren Arbeitsergebnissen. Bei Teloa lautet der Produktbegriff **KI-Mitarbeiter (AI employee)**; AI Worker ist das zugrunde liegende Standardkonzept. Auch Grok Bot lässt sich nach den unten beschriebenen Zuordnungsprüfungen damit beschreiben.
 
@@ -73,3 +81,5 @@ Zitiervorschlag: **Max Luo and Morgan Chen. AI Worker Standard 1.0. Teloa, 2026.
 ## 7. Lizenz
 
 Originalinhalte stehen unter [Apache-2.0](LICENSE). Produktnamen und verlinkte Spezifikationen Dritter behalten ihre jeweiligen Rechte. Lesen und Implementieren erfordern weder ein Teloa-Konto noch einen Teloa-Dienst.
+
+Für den Namen Teloa und die Eichhörnchen-Grafik gelten [gesonderte Markenregeln](assets/brand/README.md).

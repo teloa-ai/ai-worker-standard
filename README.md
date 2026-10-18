@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://www.teloa.ai/en/"><img src="assets/brand/teloa-reading.webp" width="120" height="120" alt="Teloa the squirrel reading"></a>
+</p>
+
 # AI Worker Standard 1.0
 
 **An open definition standard for AI Workers, AI Teams and AI Organizations.**
@@ -5,6 +9,10 @@
 By **Max Luo and Morgan Chen, co-founders of Teloa** · 18 October 2026
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-Hant.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md)
+
+[Website](https://www.teloa.ai/en/) · [Docs](https://docs.teloa.ai/en/) · [Marketplace](https://market.teloa.ai/en/) · [AI Security](https://security.teloa.ai/?lang=en) · [Blog](https://www.teloa.ai/en/blog/) · [Security reports](https://security.teloa.ai/report/?lang=en)
+
+[![Version 1.0](assets/badges/version.svg)](https://github.com/teloa-ai/ai-worker-standard/releases/tag/v1.0) [![8 core rules](assets/badges/core-rules.svg)](spec/core.en.md) [![8 languages](assets/badges/languages.svg)](docs/languages.md) [![License Apache-2.0](assets/badges/license.svg)](LICENSE)
 
 An **AI Worker** is an AI work entity with an identity that persists across tasks, defined responsibilities, an authorization boundary, and deliverables that can be checked. In Teloa, the product name is **AI employee**; AI Worker is the underlying standard concept. Grok Bot can also be described using this concept, subject to the mapping checks below.
 
@@ -73,3 +81,5 @@ Suggested citation: **Max Luo and Morgan Chen. AI Worker Standard 1.0. Teloa, 20
 ## 7. License
 
 Original material is licensed under [Apache-2.0](LICENSE). Product names and linked third-party specifications retain their respective rights. Reading or implementing this standard requires no Teloa account or service.
+
+The Teloa name and squirrel artwork follow [separate brand-use terms](assets/brand/README.md).

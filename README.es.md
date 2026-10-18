@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://www.teloa.ai/en/"><img src="assets/brand/teloa-reading.webp" width="120" height="120" alt="Teloa, la ardilla que lee"></a>
+</p>
+
 # AI Worker Standard 1.0
 
 **Un estándar abierto de definición para AI Workers, AI Teams y AI Organizations.**
@@ -5,6 +9,10 @@
 Por **Max Luo y Morgan Chen, cofundadores de Teloa** · 18 de octubre de 2026
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-Hant.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md)
+
+[Website](https://www.teloa.ai/en/) · [Docs](https://docs.teloa.ai/en/) · [Marketplace](https://market.teloa.ai/en/) · [AI Security](https://security.teloa.ai/?lang=en) · [Blog](https://www.teloa.ai/en/blog/) · [Security reports](https://security.teloa.ai/report/?lang=en)
+
+[![Version 1.0](assets/badges/version.svg)](https://github.com/teloa-ai/ai-worker-standard/releases/tag/v1.0) [![8 core rules](assets/badges/core-rules.svg)](spec/core.es.md) [![8 languages](assets/badges/languages.svg)](docs/languages.md) [![License Apache-2.0](assets/badges/license.svg)](LICENSE)
 
 Un **AI Worker** es una entidad de trabajo de IA cuya identidad persiste entre tareas, con responsabilidades definidas, un límite de autorización y entregables verificables. En Teloa, el concepto de producto es **empleado de IA (AI employee)**; AI Worker es el concepto técnico subyacente del estándar. Grok Bot también puede describirse así, sujeto a las comprobaciones de correspondencia indicadas más abajo.
 
@@ -73,3 +81,5 @@ Cita sugerida: **Max Luo and Morgan Chen. AI Worker Standard 1.0. Teloa, 2026.**
 ## 7. Licencia
 
 El material original se publica bajo [Apache-2.0](LICENSE). Los nombres de productos y las especificaciones de terceros conservan sus respectivos derechos. No se requiere cuenta ni servicio de Teloa para leer o implementar este estándar.
+
+El nombre Teloa y la ilustración de la ardilla se rigen por [normas de uso de marca independientes](assets/brand/README.md).

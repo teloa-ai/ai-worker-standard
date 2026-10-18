@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://www.teloa.ai/en/"><img src="assets/brand/teloa-reading.webp" width="120" height="120" alt="本を読むリスの Teloa"></a>
+</p>
+
 # AI Worker Standard 1.0
 
 **AI Worker、AI Team、AI Organization のためのオープンな定義標準。**
@@ -5,6 +9,10 @@
 **Max Luo、Morgan Chen｜Teloa 共同創業者** · 2026 年 10 月 18 日
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-Hant.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md)
+
+[Website](https://www.teloa.ai/en/) · [Docs](https://docs.teloa.ai/en/) · [Marketplace](https://market.teloa.ai/en/) · [AI Security](https://security.teloa.ai/?lang=en) · [Blog](https://www.teloa.ai/en/blog/) · [Security reports](https://security.teloa.ai/report/?lang=en)
+
+[![Version 1.0](assets/badges/version.svg)](https://github.com/teloa-ai/ai-worker-standard/releases/tag/v1.0) [![8 core rules](assets/badges/core-rules.svg)](spec/core.ja.md) [![8 languages](assets/badges/languages.svg)](docs/languages.md) [![License Apache-2.0](assets/badges/license.svg)](LICENSE)
 
 **AI Worker** は、タスクをまたいで維持される識別可能な主体として、明確な責務と権限の範囲内で働き、検収可能な成果を提供します。Teloa での製品名は **AI 従業員（AI employee）** です。AI Worker はその背後にある共通の標準概念です。Grok Bot も、以下の対応付けの確認を前提に、この概念で記述できます。
 
@@ -73,3 +81,5 @@ OASF からは発見用メタデータと分類体系、Oracle Agent Spec から
 ## 7. ライセンス
 
 本リポジトリの独自の内容は [Apache-2.0](LICENSE) で提供します。製品名と外部仕様の権利は各権利者に帰属します。閲覧・実装に Teloa のアカウントやサービスは不要です。
+
+Teloa の名称とリスのイラストには[別途ブランド使用規則](assets/brand/README.md)が適用されます。

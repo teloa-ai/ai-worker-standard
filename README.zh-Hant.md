@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://www.teloa.ai/en/"><img src="assets/brand/teloa-reading.webp" width="120" height="120" alt="閱讀中的 Teloa 小松鼠"></a>
+</p>
+
 # AI Worker 開放定義標準 1.0
 
 **以一套工作契約描述 AI Worker、AI 團隊與 AI 組織。**
@@ -5,6 +9,10 @@
 **Max Luo、Morgan Chen｜Teloa 共同創辦人** · 2026 年 10 月 18 日
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-Hant.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md)
+
+[Website](https://www.teloa.ai/en/) · [Docs](https://docs.teloa.ai/en/) · [Marketplace](https://market.teloa.ai/en/) · [AI Security](https://security.teloa.ai/?lang=en) · [Blog](https://www.teloa.ai/en/blog/) · [Security reports](https://security.teloa.ai/report/?lang=en)
+
+[![Version 1.0](assets/badges/version.svg)](https://github.com/teloa-ai/ai-worker-standard/releases/tag/v1.0) [![8 core rules](assets/badges/core-rules.svg)](spec/core.zh-Hant.md) [![8 languages](assets/badges/languages.svg)](docs/languages.md) [![License Apache-2.0](assets/badges/license.svg)](LICENSE)
 
 **AI Worker** 是身分與職責能跨任務延續、在授權範圍內工作，並交付可驗收成果的 AI 工作個體。在 Teloa 中，產品名稱是 **AI 員工**；AI Worker 是背後的通用標準概念。Grok Bot 亦可依此概念描述，實際適配須核對下文的映射要求。
 
@@ -73,3 +81,5 @@ Grok 的 **Bot** 可映射為 AI Worker。多人共用的 **Team Bot** 先視為
 ## 7. 授權條款
 
 原創內容採用 [Apache-2.0](LICENSE) 授權。產品名稱與第三方規範保留各自權利。閱讀或實作本規範不需要 Teloa 帳號或服務。
+
+Teloa 名稱與小松鼠素材遵循[獨立品牌使用規則](assets/brand/README.md)。

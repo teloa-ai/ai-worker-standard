@@ -1,3 +1,7 @@
+<p align="center">
+  <a href="https://www.teloa.ai/en/"><img src="assets/brand/teloa-reading.webp" width="120" height="120" alt="책을 읽는 다람쥐 Teloa"></a>
+</p>
+
 # AI Worker Standard 1.0
 
 **AI Worker, AI Team, AI Organization을 위한 공개 정의 표준입니다.**
@@ -5,6 +9,10 @@
 **Max Luo, Morgan Chen｜Teloa 공동 창업자** · 2026년 10월 18일
 
 [English](README.md) · [简体中文](README.zh-CN.md) · [繁體中文](README.zh-Hant.md) · [日本語](README.ja.md) · [한국어](README.ko.md) · [Deutsch](README.de.md) · [Français](README.fr.md) · [Español](README.es.md)
+
+[Website](https://www.teloa.ai/en/) · [Docs](https://docs.teloa.ai/en/) · [Marketplace](https://market.teloa.ai/en/) · [AI Security](https://security.teloa.ai/?lang=en) · [Blog](https://www.teloa.ai/en/blog/) · [Security reports](https://security.teloa.ai/report/?lang=en)
+
+[![Version 1.0](assets/badges/version.svg)](https://github.com/teloa-ai/ai-worker-standard/releases/tag/v1.0) [![8 core rules](assets/badges/core-rules.svg)](spec/core.ko.md) [![8 languages](assets/badges/languages.svg)](docs/languages.md) [![License Apache-2.0](assets/badges/license.svg)](LICENSE)
 
 **AI Worker**는 여러 작업에 걸쳐 식별되는 정체성, 명확한 책임, 권한 경계를 갖추고 검수 가능한 결과물을 제공하는 AI 작업 주체입니다. Teloa의 제품 명칭은 **AI 직원(AI employee)**이며, AI Worker는 그 바탕이 되는 공통 표준 개념입니다. Grok Bot도 아래 매핑 검토를 전제로 이 개념으로 설명할 수 있습니다.
 
@@ -73,3 +81,5 @@ OASF의 검색용 메타데이터와 분류 체계, Oracle Agent Spec의 구성 
 ## 7. 라이선스
 
 이 저장소의 원본 자료는 [Apache-2.0](LICENSE) 라이선스로 제공됩니다. 제품 명칭과 외부 명세의 권리는 각 권리자에게 있습니다. 읽거나 구현하는 데 Teloa 계정이나 서비스가 필요하지 않습니다.
+
+Teloa 명칭과 다람쥐 이미지에는 [별도 브랜드 사용 규칙](assets/brand/README.md)이 적용됩니다.
