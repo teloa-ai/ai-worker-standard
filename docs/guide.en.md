@@ -4,9 +4,9 @@
 
 A name and a role prompt are enough to start experimenting. A second assignment raises more practical questions: is this the same worker as before? Which material did it use? What reached the next member? Who decides whether to accept the result?
 
-The AI Worker draft connects persistent identity, responsibilities, work interfaces and acceptance. It gives products a way to describe what an AI work entity undertakes, and gives users a way to check its deliverables.
+The AI Worker standard connects persistent identity, responsibilities, work interfaces and acceptance. It gives products a way to describe what an AI work entity undertakes, and gives users a way to check its deliverables.
 
-This guide explains core `0.1.0-draft.7` and work profile `0.1.0-draft.2`. It is an open draft. Examples are teaching material, not customer results or execution evidence. The [Chinese specifications](../spec/core.zh-CN.md) are normative for this edition.
+This guide introduces **AI Worker Standard 1.0**, including its core and work profile. Examples are teaching material, not customer results or execution evidence. The [Chinese specifications](../spec/core.zh-CN.md) are normative for this edition.
 
 ## What makes up a Worker
 
@@ -101,9 +101,9 @@ The same relationship applies to SOC work. If teaching material contains only on
 
 ## Mapping Grok Bot and Teloa
 
-Teloa calls its product entity an AI employee; Grok calls it a Bot. This draft uses Worker for a common definition while checking each contract. Grok's public design describes persistent Bots and components such as Skills and Routines. It supports a conceptual comparison, not a claim that a converter or official compatibility certification exists. [Grok design](https://x.ai/news/designing-grok-bot)
+Teloa calls its product entity an AI employee; Grok calls it a Bot. This standard uses Worker for a common definition while checking each contract. Grok's public design describes persistent Bots and components such as Skills and Routines. It supports a conceptual comparison, not a claim that a converter or official compatibility certification exists. [Grok design](https://x.ai/news/designing-grok-bot)
 
-| Product concept | Draft counterpart | Check during adaptation |
+| Product concept | Standard counterpart | Check during adaptation |
 | --- | --- | --- |
 | Teloa AI employee; Grok Bot | Worker definition and instance | Persistent identity, responsibilities, Work I/O and acceptance |
 | Role prompt; Bot profile | `instructions` and `responsibility` | Concrete boundaries; do not infer missing contracts from names |
@@ -118,9 +118,9 @@ See the [mapping document](mappings.md) for field correspondence and unsupported
 
 ## Reusing existing specifications
 
-OASF supplies discovery records, domains and skill taxonomies. The draft preserves that native metadata and its versions, while Work contracts define inputs, outputs and acceptance. A taxonomy skill and an executable Skill package are different objects. [OASF Record Guide](https://docs.agntcy.org/oasf/agent-record-guide/)
+OASF supplies discovery records, domains and skill taxonomies. The standard preserves that native metadata and its versions, while Work contracts define inputs, outputs and acceptance. A taxonomy skill and an executable Skill package are different objects. [OASF Record Guide](https://docs.agntcy.org/oasf/agent-record-guide/)
 
-Oracle Agent Spec offers useful component-reference, interface and composition designs. This draft borrows those ideas. Mapping a concrete version still requires converting interfaces, references and execution semantics; renamed fields alone do not establish interoperability. [Oracle Agent Spec 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
+Oracle Agent Spec offers useful component-reference, interface and composition designs. This standard borrows those ideas. Mapping a concrete version still requires converting interfaces, references and execution semantics; renamed fields alone do not establish interoperability. [Oracle Agent Spec 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
 
 JSON carries the normative exchange definition. YAML is an optional authoring input with restricted conversion: reject duplicate keys, anchors, aliases, explicit tags, non-finite numbers and multiple documents, and preserve number and string meanings. `revision: "1"` is a string; `revision: 1` fails the field type check. Both files must not become independently editable sources for the same revision.
 

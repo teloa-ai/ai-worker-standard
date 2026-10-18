@@ -1,10 +1,10 @@
 # Product and specification mappings / 产品与规范映射
 
-Reference date: **2026-10-18**. Target: core `0.1.0-draft.7` and work profile `0.1.0-draft.2`.
+Reference date: **2026-10-18**. Target: core `1.0` and work profile `1.0`.
 
 These mappings are the authors' interpretation of the cited product documents and Teloa's public contracts. They are not vendor endorsements or evidence that a converter has been implemented. A concrete adapter must preserve the source, identify its version or content digest, and report what it retained, converted or could not support.
 
-以下对应关系是本草案的适配解释。产品名称不构成符合性声明，字段对应也不证明真实运行已经完成。权限、验收或交接语义无法保留时，必须阻止受影响的工作。
+以下对应关系是本规范的适配解释。产品名称不构成符合性声明，字段对应也不证明真实运行已经完成。权限、验收或交接语义无法保留时，必须阻止受影响的工作。
 
 ## Teloa
 
@@ -23,7 +23,7 @@ These mappings are the authors' interpretation of the cited product documents an
 
 The public contract source is [Teloa `roles.ts`](https://github.com/teloa-ai/teloa/blob/main/packages/contract/src/roles.ts). `main` is a navigation link; an actual adapter must pin its own source revision and digest. Host validation may normalize text or limit fields. Preserve the original definition and report any projection differences rather than claiming a lossless round trip through a product-specific form.
 
-Teloa 的既有角色、群、项目、任务和成果可承载这些关系；本草案不要求增加一套重名对象。绑定表和运行证据要能解释真实关系。某个平台字段存在，不等于本次配置已经有效。
+Teloa 的既有角色、群、项目、任务和成果可承载这些关系；本规范不要求增加一套重名对象。绑定表和运行证据要能解释真实关系。某个平台字段存在，不等于本次配置已经有效。
 
 ## Grok Bot
 
@@ -50,13 +50,13 @@ The Team Bot documentation describes one Bot shared by people, private conversat
 
 OASF's record and discovery definitions provide names, descriptions, schema versions, skill/domain taxonomies and resource locators. Preserve native payloads and pin their schema/taxonomy version; do not invent official classification identifiers. [Record Guide](https://docs.agntcy.org/oasf/agent-record-guide/) · [Discovery Extension](https://docs.agntcy.org/oasf/discovery-extension/)
 
-本草案的工作附录规定了 discovery 扩展的包装方式。仅作发现信息时可以是 optional；若用于不可忽略的执行选择条件，则必须是 required，并由宿主验证。分类没有授予权限，也不代替 Work 合同。OASF 分类中的 `skills` 不等于本规范引用的可执行 Agent Skills 文件包。
+本规范的工作附录规定了 discovery 扩展的包装方式。仅作发现信息时可以是 optional；若用于不可忽略的执行选择条件，则必须是 required，并由宿主验证。分类没有授予权限，也不代替 Work 合同。OASF 分类中的 `skills` 不等于本规范引用的可执行 Agent Skills 文件包。
 
 ## Oracle Agent Spec
 
-Agent Spec 26.1.2 offers component references, JSON-Schema-based interfaces, and composition components such as Swarm and ManagerWorkers. These are useful source concepts; its configuration-local `$component_ref` differs from this draft's cross-definition `id` + `revision`. [Specification 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
+Agent Spec 26.1.2 offers component references, JSON-Schema-based interfaces, and composition components such as Swarm and ManagerWorkers. These are useful source concepts; its configuration-local `$component_ref` differs from this standard's cross-definition `id` + `revision`. [Specification 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
 
-接口属性列表与本规范的根对象 Schema 需要显式转换；协作还需核对会话转交、消息流、面向用户的成员以及实际权限。本草案不采用隐式输入输出类型转换，不强制主管制，也不声称兼容其全部运行时。
+接口属性列表与本规范的根对象 Schema 需要显式转换；协作还需核对会话转交、消息流、面向用户的成员以及实际权限。本规范不采用隐式输入输出类型转换，不强制主管制，也不声称兼容其全部运行时。
 
 ## Adapter report / 适配报告
 

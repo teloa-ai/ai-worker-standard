@@ -1,8 +1,8 @@
-# AI Worker、AI Team 与 AI Organization 开放定义标准 v0.1
+# AI Worker、AI Team 与 AI Organization 开放定义标准 1.0
 
 **Max、Morgan｜Teloa 联合创始人**
 
-核心版本：`0.1.0-draft.7`。发布日期：2026-10-18。状态：开放草案。
+核心版本：`1.0`。发布日期：2026-10-18。状态：开放规范。
 
 本文与[工作与协作应用规范](work-profile.zh-CN.md)共同构成本版规范。第 1–3 节解释概念，第 4–9 节规定核心交换行为。实例配置和真实运行另行验收。
 
@@ -21,7 +21,7 @@
 | AI Workforce | 某范围内 AI 工作者及工作容量的集合称谓 | 本版不增加独立对象或格式 |
 | AI 员工、Bot | 产品或业务中的称呼 | 按实际组成和行为映射，不凭产品名称自动符合 |
 
-AI Worker 已有公开使用，例如 [11x](https://www.11x.ai/11x-manifesto) 与 [Delos](https://marketplace.microsoft.com/en-us/product/office/WA200011292)。本草案采用已有术语并给出自身的规范性定义；不主张名称首创，也不把厂商称呼当作统一行业标准。首次对外使用时写明“AI Worker（软件工作个体）”，避免与从事 AI 行业的人类工作者混淆。
+AI Worker 已有公开使用，例如 [11x](https://www.11x.ai/11x-manifesto) 与 [Delos](https://marketplace.microsoft.com/en-us/product/office/WA200011292)。本规范采用已有术语并给出自身的规范性定义；不主张名称首创，也不把厂商称呼当作统一行业标准。首次对外使用时写明“AI Worker（软件工作个体）”，避免与从事 AI 行业的人类工作者混淆。
 
 ### 1.1 AI Worker 由什么组成
 
@@ -147,9 +147,9 @@ Agent Spec 的组件引用采用配置内的 `$component_ref`；输入输出基�
 
 ```json
 {
-  "specVersion": "0.1.0-draft.7",
+  "specVersion": "1.0",
   "id": "urn:example:definition:research-assistant",
-  "revision": "4",
+  "revision": "5",
   "kind": "agent",
   "name": "研究助手",
   "instructions": "根据提供的资料回答问题，保留来源，区分事实、推断和未知。"
@@ -164,15 +164,15 @@ Agent Spec 的组件引用采用配置内的 `$component_ref`；输入输出基�
 
 ```json
 {
-  "specVersion": "0.1.0-draft.7",
+  "specVersion": "1.0",
   "id": "urn:example:definition:document-worker",
-  "revision": "1",
+  "revision": "2",
   "kind": "agent",
   "name": "材料摘要工作者",
   "instructions": "持续承担已提供材料的摘要工作，注明材料之外无法核实的内容。",
   "extensions": [{
     "id": "urn:teloa:profile:ai-work",
-    "version": "0.1.0-draft.2",
+    "version": "1.0",
     "required": true,
     "data": {
       "responsibility": {
@@ -224,9 +224,9 @@ Agent Spec 的组件引用采用配置内的 `$component_ref`；输入输出基�
 
 ```json
 {
-  "specVersion": "0.1.0-draft.7",
+  "specVersion": "1.0",
   "id": "urn:example:definition:research-team",
-  "revision": "4",
+  "revision": "5",
   "kind": "organization",
   "name": "研究小组",
   "instructions": "research 整理证据，review 检查来源和结论；发现分歧时保留分歧。",
@@ -235,14 +235,14 @@ Agent Spec 的组件引用采用配置内的 `$component_ref`；输入输出基�
       "id": "research",
       "ref": {
         "id": "urn:example:definition:research-assistant",
-        "revision": "4"
+        "revision": "5"
       }
     },
     {
       "id": "review",
       "ref": {
         "id": "urn:example:definition:research-assistant",
-        "revision": "4"
+        "revision": "5"
       }
     }
   ]
@@ -259,7 +259,7 @@ Agent Spec 的组件引用采用配置内的 `$component_ref`；输入输出基�
 
 | 字段 | 类型与范围 | 为什么保留 |
 | --- | --- | --- |
-| specVersion | 必需，精确为 `0.1.0-draft.7` | 确定怎样解释文件 |
+| specVersion | 必需，精确为 `1.0` | 确定怎样解释文件 |
 | id | 必需，绝对 URI 或 URN | 跨文件引用同一定义 |
 | revision | 必需，非空字符串，不得为 latest | 固定内容，避免引用悄悄变化 |
 | kind | 必需，agent 或 organization | 区分单体与组合 |
@@ -307,7 +307,7 @@ URI 均为绝对 URI 或 URN；Digest 为 `sha256:` 加 64 位小写十六进制
 
 **MCP：** connectionRef 由部署者映射，必须展示实际连接并独立授权，不包含 token 或启动命令。遵守所声明版本的发现、传输和授权；不得仅按工具名称自动匹配到另一连接。核心不逐项描述工具参数或制定通用工具权限语言。[MCP 版本规则](https://modelcontextprotocol.io/docs/2026-07-28/learn/versioning)
 
-**Skills：** formatSnapshot 必须是不可变的格式规范来源，摘要针对完整包原始字节。解包根目录为一个技能目录，拒绝路径逃逸、重复归一化路径及软／硬链接；导入不执行脚本。ZIP／TAR 是本草案的包装约定，不是 Agent Skills 的原生要求。[Agent Skills 格式](https://agentskills.io/specification)
+**Skills：** formatSnapshot 必须是不可变的格式规范来源，摘要针对完整包原始字节。解包根目录为一个技能目录，拒绝路径逃逸、重复归一化路径及软／硬链接；导入不执行脚本。ZIP／TAR 是本规范的包装约定，不是 Agent Skills 的原生要求。[Agent Skills 格式](https://agentskills.io/specification)
 
 **A2A：** interfaceUrl、protocolBinding、protocolVersion 必须对应实际 Card 的同一接口；所声明的 skillIds 及双方必需扩展按原生规范核验，授权另查。服务端完成不等于业务目标达成；A2A AgentSkill 不等于 Agent Skills 文件包。[A2A 规范](https://a2a-protocol.org/latest/specification/)
 
@@ -360,7 +360,7 @@ URI 均为绝对 URI 或 URN；Digest 为 `sha256:` 加 64 位小写十六进制
 
 首个演示可使用本地目录，每份定义一个 JSON 文件，按内容中的 id／revision 建索引，文件名不承担语义；这是示例交付方式，不是新增的分发协议。配上嵌套、缺失和冲突反例及预期结果，再用两个独立实现核对校验、导入和导出行为。随后选一个实际需要的能力绑定，验证“导入 → 配置连接／授权 → 执行 → 取得成果”。未完成此路径前，不扩大为通用运行、支付或生命管理标准。
 
-规范版本升级必须重新校验、更新 specVersion 和附录版本，并生成新 revision；成员引用同步固定。旧定义与旧 Run 不原地改写。草案之间不承诺自动兼容；每次语义变更须提供迁移说明，见[维护规则](../GOVERNANCE.md)。
+规范版本升级必须重新校验、更新 specVersion 和附录版本，并生成新 revision；成员引用同步固定。旧定义与旧 Run 不原地改写。不同规范版本不自动兼容；语义变更须提供迁移说明，见[维护规则](../GOVERNANCE.md)。
 
 ### 10.1 通用核心与行业配置
 
@@ -374,6 +374,6 @@ URI 均为绝对 URI 或 URN；Digest 为 `sha256:` 加 64 位小写十六进制
 
 ### 10.2 当前地位与推进条件
 
-当前是由 Teloa 维护的开放草案，未获得行业或国际标准地位。原创规范与示例采用 [Apache-2.0](../LICENSE) 许可；维护、反馈与版本规则见 [GOVERNANCE.md](../GOVERNANCE.md)，声明范围见 [CONFORMANCE.md](../CONFORMANCE.md)。行业互操作主张还需至少两个独立实现，以及包含非 SOC 场景的公开可重复验证证据。评审意见与示例检查不替代这些证据。
+当前是由 Teloa 维护的开放规范，未获得行业或国际标准地位。原创规范与示例采用 [Apache-2.0](../LICENSE) 许可；维护、反馈与版本规则见 [GOVERNANCE.md](../GOVERNANCE.md)，声明范围见 [CONFORMANCE.md](../CONFORMANCE.md)。行业互操作主张还需至少两个独立实现，以及包含非 SOC 场景的公开可重复验证证据。评审意见与示例检查不替代这些证据。
 
-解释定义不得依赖 Teloa 账号、云服务或私有数据库。`urn:teloa:profile:ai-work` 是既有扩展的发布者命名空间，保留它以避免同义标识分裂；它不要求 Teloa 宿主，也不是行业管理机构背书。产品仍可用一段自然语言生成可审阅草案。
+解释定义不得依赖 Teloa 账号、云服务或私有数据库。`urn:teloa:profile:ai-work` 是既有扩展的发布者命名空间，保留它以避免同义标识分裂；它不要求 Teloa 宿主，也不是行业管理机构背书。产品仍可用一段自然语言生成待确认的定义。

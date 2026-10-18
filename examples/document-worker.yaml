@@ -1,13 +1,13 @@
 # 从标准正文的最小 Worker 示例生成；没有运行或授予权限。
-specVersion: 0.1.0-draft.7
+specVersion: "1.0"
 id: urn:example:definition:document-worker
-revision: "1"
+revision: "2"
 kind: agent
 name: 材料摘要工作者
 instructions: 持续承担已提供材料的摘要工作，注明材料之外无法核实的内容。
 extensions:
   - id: urn:teloa:profile:ai-work
-    version: 0.1.0-draft.2
+    version: "1.0"
     required: true
     data:
       responsibility:

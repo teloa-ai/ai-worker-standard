@@ -1,18 +1,18 @@
 {
-  "fixtureFormat": "ai-work-definition-examples/draft.7",
+  "fixtureFormat": "ai-work-definition-examples/1.0",
   "notice": "本地非执行测试夹具。定义示例不等于完整 SOC 岗位配置；外层集合、宿主绑定和模拟预期不属于标准交换文档。应用连接未配置，组织策略为示意格式，未执行宿主适配。",
   "definitions": [
     {
-      "specVersion": "0.1.0-draft.7",
+      "specVersion": "1.0",
       "id": "urn:example:ai-work:analyst",
-      "revision": "2",
+      "revision": "3",
       "kind": "agent",
       "name": "研判员工示例",
       "instructions": "按所列工作合同承担责任，遵守来源、授权、交接与验收要求。",
       "extensions": [
         {
           "id": "urn:teloa:profile:ai-work",
-          "version": "0.1.0-draft.2",
+          "version": "1.0",
           "required": true,
           "data": {
             "responsibility": {
@@ -157,16 +157,16 @@
       ]
     },
     {
-      "specVersion": "0.1.0-draft.7",
+      "specVersion": "1.0",
       "id": "urn:example:ai-work:reviewer",
-      "revision": "2",
+      "revision": "3",
       "kind": "agent",
       "name": "质检员工示例",
       "instructions": "按所列工作合同承担责任，遵守来源、授权、交接与验收要求。",
       "extensions": [
         {
           "id": "urn:teloa:profile:ai-work",
-          "version": "0.1.0-draft.2",
+          "version": "1.0",
           "required": true,
           "data": {
             "responsibility": {
@@ -248,16 +248,16 @@
       ]
     },
     {
-      "specVersion": "0.1.0-draft.7",
+      "specVersion": "1.0",
       "id": "urn:example:ai-work:team-a",
-      "revision": "3",
+      "revision": "4",
       "kind": "organization",
       "name": "协作组 A 示例",
       "instructions": "按所列工作合同承担责任，遵守来源、授权、交接与验收要求。",
       "extensions": [
         {
           "id": "urn:teloa:profile:ai-work",
-          "version": "0.1.0-draft.2",
+          "version": "1.0",
           "required": true,
           "data": {
             "responsibility": {
@@ -380,29 +380,29 @@
           "id": "analyst",
           "ref": {
             "id": "urn:example:ai-work:analyst",
-            "revision": "2"
+            "revision": "3"
           }
         },
         {
           "id": "quality",
           "ref": {
             "id": "urn:example:ai-work:reviewer",
-            "revision": "2"
+            "revision": "3"
           }
         }
       ]
     },
     {
-      "specVersion": "0.1.0-draft.7",
+      "specVersion": "1.0",
       "id": "urn:example:ai-work:team-b",
-      "revision": "3",
+      "revision": "4",
       "kind": "organization",
       "name": "协作组 B 示例",
       "instructions": "按所列工作合同承担责任，遵守来源、授权、交接与验收要求。",
       "extensions": [
         {
           "id": "urn:teloa:profile:ai-work",
-          "version": "0.1.0-draft.2",
+          "version": "1.0",
           "required": true,
           "data": {
             "responsibility": {
@@ -525,29 +525,29 @@
           "id": "analyst",
           "ref": {
             "id": "urn:example:ai-work:analyst",
-            "revision": "2"
+            "revision": "3"
           }
         },
         {
           "id": "quality",
           "ref": {
             "id": "urn:example:ai-work:reviewer",
-            "revision": "2"
+            "revision": "3"
           }
         }
       ]
     },
     {
-      "specVersion": "0.1.0-draft.7",
+      "specVersion": "1.0",
       "id": "urn:example:ai-work:organization",
-      "revision": "3",
+      "revision": "4",
       "kind": "organization",
       "name": "AI 组织组合示例",
       "instructions": "按所列工作合同承担责任，遵守来源、授权、交接与验收要求。",
       "extensions": [
         {
           "id": "urn:teloa:profile:ai-work",
-          "version": "0.1.0-draft.2",
+          "version": "1.0",
           "required": true,
           "data": {
             "responsibility": {
@@ -676,14 +676,14 @@
           "id": "team-a",
           "ref": {
             "id": "urn:example:ai-work:team-a",
-            "revision": "3"
+            "revision": "4"
           }
         },
         {
           "id": "team-b",
           "ref": {
             "id": "urn:example:ai-work:team-b",
-            "revision": "3"
+            "revision": "4"
           }
         }
       ]
@@ -773,7 +773,7 @@
       {
         "definition": {
           "id": "urn:example:ai-work:team-a",
-          "revision": "3"
+          "revision": "4"
         },
         "work": "deliver",
         "inputDistribution": [
@@ -808,7 +808,7 @@
       {
         "definition": {
           "id": "urn:example:ai-work:team-b",
-          "revision": "3"
+          "revision": "4"
         },
         "work": "deliver",
         "inputDistribution": [
@@ -843,7 +843,7 @@
       {
         "definition": {
           "id": "urn:example:ai-work:organization",
-          "revision": "3"
+          "revision": "4"
         },
         "work": "deliver",
         "inputDistribution": [

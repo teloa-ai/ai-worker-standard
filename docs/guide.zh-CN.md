@@ -6,7 +6,7 @@
 
 AI Worker 标准从这些问题出发。它把跨任务延续的身份、职责、工作接口和验收要求放在一起，让产品能够说明一个 AI 工作个体承担什么，也让使用者能够核对它交付了什么。
 
-本文解释核心 `0.1.0-draft.7` 和工作应用规范 `0.1.0-draft.2`。这是开放草案；文中的例子是教学材料，不是客户案例或运行证明。[规范正文](../spec/core.zh-CN.md)规定技术要求。
+本文介绍 **AI Worker 标准 1.0**，包括核心规范和工作与协作应用规范。文中的例子是教学材料，不是客户案例或运行证明。[规范正文](../spec/core.zh-CN.md)规定技术要求。
 
 ## 一个 Worker，需要把哪些事情说清楚
 
@@ -101,9 +101,9 @@ AI Worker 标准从这些问题出发。它把跨任务延续的身份、职责�
 
 ## Grok Bot 与 Teloa 怎样对应
 
-Teloa 的产品名称是“AI 员工”，Grok 使用 Bot。本草案用 AI Worker 表达二者可共同描述的工作个体，并逐项检查合同。Grok 的公开设计介绍了可持续存在的 Bot，以及 Skills、Routines 等组成；这支持概念上的比较，不等于已有转换器或官方兼容认证。[Grok 设计说明](https://x.ai/news/designing-grok-bot)
+Teloa 的产品名称是“AI 员工”，Grok 使用 Bot。本规范用 AI Worker 表达二者可共同描述的工作个体，并逐项检查合同。Grok 的公开设计介绍了可持续存在的 Bot，以及 Skills、Routines 等组成；这支持概念上的比较，不等于已有转换器或官方兼容认证。[Grok 设计说明](https://x.ai/news/designing-grok-bot)
 
-| 产品概念 | 在本草案中的对应 | 适配时需要确认 |
+| 产品概念 | 在本规范中的对应 | 适配时需要确认 |
 | --- | --- | --- |
 | Teloa AI 员工；Grok Bot | Worker 定义与实际实例 | 持续身份、职责、工作 I/O 和验收是否完整 |
 | 岗位提示词、Bot profile | `instructions` 与 `responsibility` | 工作边界是否具体，缺项不得从名字推断 |
@@ -118,9 +118,9 @@ Grok Team Bot 的文档描述的是多人使用同一个 Bot。它与“多个 W
 
 ## 复用现有规范，保持范围清楚
 
-OASF 提供 Agent 的发现记录、领域与能力分类，适合帮助使用者找到候选能力。本草案保留这些原生分类及其版本，另用工作合同说明输入、输出与验收。OASF 的分类技能和可执行 Skill 包不是同一种对象。[OASF Record Guide](https://docs.agntcy.org/oasf/agent-record-guide/)
+OASF 提供 Agent 的发现记录、领域与能力分类，适合帮助使用者找到候选能力。本规范保留这些原生分类及其版本，另用工作合同说明输入、输出与验收。OASF 的分类技能和可执行 Skill 包不是同一种对象。[OASF Record Guide](https://docs.agntcy.org/oasf/agent-record-guide/)
 
-Oracle Agent Spec 的组件引用、输入输出与组合定义值得复用。本草案借鉴这些思路；适配具体版本时仍须逐项转换接口、引用和执行语义，不能把字段改名就称为互通。[Oracle Agent Spec 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
+Oracle Agent Spec 的组件引用、输入输出与组合定义值得复用。本规范借鉴这些思路；适配具体版本时仍须逐项转换接口、引用和执行语义，不能把字段改名就称为互通。[Oracle Agent Spec 26.1.2](https://oracle.github.io/agent-spec/26.1.2/agentspec/language_spec_26_1_2.html)
 
 JSON 用于交换固定定义，YAML 可以用于编写。YAML 转换须拒绝重复键、锚点、别名、显式标签、非有限数值和多文档等不在约定内的输入，并保留数值与字符串含义。例如 `revision: "1"` 是字符串，`revision: 1` 会因类型错误被拒绝。两种文件不能成为同一修订下各自随意修改的来源。
 

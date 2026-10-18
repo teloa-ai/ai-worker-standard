@@ -1,6 +1,6 @@
-# AI Worker Standard
+# AI Worker Standard 1.0
 
-**An open definition draft for AI Workers, AI Teams and AI Organizations.**
+**An open definition standard for AI Workers, AI Teams and AI Organizations.**
 
 By **Max and Morgan, co-founders of Teloa** · 18 October 2026
 
@@ -14,7 +14,7 @@ These terms describe working arrangements. They do not confer legal personality 
 
 ![Worker, Team and Organization](diagrams/en/composition.png)
 
-## What this draft specifies
+## What this standard specifies
 
 The core format has two kinds: `agent` and `organization`. The required work profile describes responsibilities, work inputs and outputs, dependencies, acceptance and collaboration. A six-field `agent` document alone is a core definition, not a complete Worker definition.
 
@@ -28,7 +28,7 @@ The core format has two kinds: `agent` and `organization`. The required work pro
 | [Conformance boundaries](CONFORMANCE.md) | What an implementation can claim and what evidence it needs |
 | [Governance](GOVERNANCE.md) | Maintenance, feedback, changes and licensing |
 
-**Current versions:** core `0.1.0-draft.7`; work profile `0.1.0-draft.2`, identified by `urn:teloa:profile:ai-work`. The normative specification is currently in Simplified Chinese. English guides are explanatory; a normative English edition requires a separately reviewed publication.
+**Version 1.0:** core and work profile; the profile is identified by `urn:teloa:profile:ai-work`. The normative specification is currently in Simplified Chinese. English guides are explanatory; a normative English edition requires a separately reviewed publication.
 
 JSON is the normative exchange format. YAML is an optional authoring format with a restricted conversion profile. Importing either format does not install tools, connect accounts, start a worker, enable routines or authorize execution.
 
@@ -40,7 +40,7 @@ OASF contributes discovery metadata and taxonomies. Oracle Agent Spec contribute
 
 ## Status and participation
 
-This is a **Teloa-maintained open draft**, not an adopted international standard or a certification scheme. There is no claim of endorsement by xAI, AGNTCY, Oracle or a standards organization. Current examples illustrate the contract; they are not a deployment package or proof of cross-platform interoperability.
+This is a **Teloa-maintained open standard**, not an adopted international standard or a certification scheme. There is no claim of endorsement by xAI, AGNTCY, Oracle or a standards organization. Current examples illustrate the contract; they are not a deployment package or proof of cross-platform interoperability.
 
 The next interoperability milestone is reproducible exchange testing by two independent implementations, including a non-SOC use case. Contributions should report the exact specification/profile versions, the behavior tested and unsupported requirements.
 
@@ -48,4 +48,4 @@ Use [Issues](https://github.com/teloa-ai/ai-worker-standard/issues) for a concre
 
 ## License
 
-Original material in this repository is licensed under [Apache-2.0](LICENSE). Product names and linked third-party specifications retain their respective rights. No product account or Teloa service is required to read or implement this draft.
+Original material in this repository is licensed under [Apache-2.0](LICENSE). Product names and linked third-party specifications retain their respective rights. No product account or Teloa service is required to read or implement this standard.
