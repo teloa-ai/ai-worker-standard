@@ -1,0 +1,64 @@
+# 从标准正文的最小 Worker 示例生成；没有运行或授予权限。
+specVersion: 0.1.0-draft.7
+id: urn:example:definition:document-worker
+revision: "1"
+kind: agent
+name: 材料摘要工作者
+instructions: 持续承担已提供材料的摘要工作，注明材料之外无法核实的内容。
+extensions:
+  - id: urn:teloa:profile:ai-work
+    version: 0.1.0-draft.2
+    required: true
+    data:
+      responsibility:
+        triggers:
+          - 收到已授权的摘要任务
+        autonomousActions:
+          - 读取本次提供的材料并撰写摘要
+        confirmationPoints:
+          - 对外发布须由任务负责人另行确认
+        escalationRules:
+          - 材料缺失或相互矛盾时报告缺口
+        deliveryChecks:
+          - 摘要可回查材料，不补造事实
+      resources: []
+      authorityRoles:
+        - id: owner
+          name: 任务负责人
+          kind: human
+      works:
+        - id: summarize
+          title: 材料摘要
+          instructions: 根据输入材料交付摘要和未决问题。
+          inputs:
+            $schema: https://json-schema.org/draft/2020-12/schema
+            type: object
+            properties:
+              material:
+                type: string
+                minLength: 1
+            required:
+              - material
+            additionalProperties: false
+          outputs:
+            $schema: https://json-schema.org/draft/2020-12/schema
+            type: object
+            properties:
+              summary:
+                type: string
+                minLength: 1
+              openQuestions:
+                type: array
+                items:
+                  type: string
+            required:
+              - summary
+              - openQuestions
+            additionalProperties: false
+          requires: []
+          responsible: self
+          acceptance:
+            criteria:
+              - 摘要与输入材料一致，未决问题单列
+            reviewer: authority/owner
+            independent: true

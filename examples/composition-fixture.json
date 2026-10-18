@@ -1,0 +1,880 @@
+{
+  "fixtureFormat": "ai-work-definition-examples/draft.7",
+  "notice": "本地非执行测试夹具。定义示例不等于完整 SOC 岗位配置；外层集合、宿主绑定和模拟预期不属于标准交换文档。应用连接未配置，组织策略为示意格式，未执行宿主适配。",
+  "definitions": [
+    {
+      "specVersion": "0.1.0-draft.7",
+      "id": "urn:example:ai-work:analyst",
+      "revision": "2",
+      "kind": "agent",
+      "name": "研判员工示例",
+      "instructions": "按所列工作合同承担责任，遵守来源、授权、交接与验收要求。",
+      "extensions": [
+        {
+          "id": "urn:teloa:profile:ai-work",
+          "version": "0.1.0-draft.2",
+          "required": true,
+          "data": {
+            "responsibility": {
+              "triggers": [
+                "本人或已授权任务交办"
+              ],
+              "autonomousActions": [
+                "只在本次已授权范围整理证据与形成成果"
+              ],
+              "confirmationPoints": [
+                "业务采用及外部动作由对应可信主体确认"
+              ],
+              "escalationRules": [
+                "输入不足、权限缺失或无进展时说明缺口"
+              ],
+              "deliveryChecks": [
+                "事实、推断与未知分开，保留证据"
+              ]
+            },
+            "resources": [
+              {
+                "id": "alerts",
+                "title": "Wazuh 只读连接槽位",
+                "purpose": "application",
+                "binding": {
+                  "kind": "mcp",
+                  "config": {
+                    "protocolVersion": "2026-07-28",
+                    "transport": "streamable-http",
+                    "connectionRef": "example-wazuh-readonly"
+                  }
+                }
+              }
+            ],
+            "works": [
+              {
+                "id": "inspect",
+                "title": "分析已提供的告警材料",
+                "instructions": "分析已提供的告警材料；保留来源，不将工具返回当作最终业务采用。",
+                "inputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                },
+                "outputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "report": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "report",
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                },
+                "requires": [],
+                "responsible": "self",
+                "acceptance": {
+                  "criteria": [
+                    "输入输出符合合同，证据可定位，未知已明确"
+                  ],
+                  "reviewer": "authority/owner",
+                  "independent": true
+                }
+              },
+              {
+                "id": "query",
+                "title": "查询已授权的告警来源",
+                "instructions": "查询已授权的告警来源；保留来源，不将工具返回当作最终业务采用。",
+                "inputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "query": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "query"
+                  ],
+                  "additionalProperties": false
+                },
+                "outputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "report": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "report",
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                },
+                "requires": [
+                  "alerts"
+                ],
+                "responsible": "self",
+                "acceptance": {
+                  "criteria": [
+                    "输入输出符合合同，证据可定位，未知已明确"
+                  ],
+                  "reviewer": "authority/owner",
+                  "independent": true
+                }
+              }
+            ],
+            "authorityRoles": [
+              {
+                "id": "owner",
+                "name": "业务负责人",
+                "kind": "human"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "specVersion": "0.1.0-draft.7",
+      "id": "urn:example:ai-work:reviewer",
+      "revision": "2",
+      "kind": "agent",
+      "name": "质检员工示例",
+      "instructions": "按所列工作合同承担责任，遵守来源、授权、交接与验收要求。",
+      "extensions": [
+        {
+          "id": "urn:teloa:profile:ai-work",
+          "version": "0.1.0-draft.2",
+          "required": true,
+          "data": {
+            "responsibility": {
+              "triggers": [
+                "本人或已授权任务交办"
+              ],
+              "autonomousActions": [
+                "只在本次已授权范围整理证据与形成成果"
+              ],
+              "confirmationPoints": [
+                "业务采用及外部动作由对应可信主体确认"
+              ],
+              "escalationRules": [
+                "输入不足、权限缺失或无进展时说明缺口"
+              ],
+              "deliveryChecks": [
+                "事实、推断与未知分开，保留证据"
+              ]
+            },
+            "resources": [],
+            "works": [
+              {
+                "id": "review",
+                "title": "复核固定成果",
+                "instructions": "复核固定成果；保留来源，不将工具返回当作最终业务采用。",
+                "inputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "report": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "report",
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                },
+                "outputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "review": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "review"
+                  ],
+                  "additionalProperties": false
+                },
+                "requires": [],
+                "responsible": "self",
+                "acceptance": {
+                  "criteria": [
+                    "输入输出符合合同，证据可定位，未知已明确"
+                  ],
+                  "reviewer": "authority/owner",
+                  "independent": true
+                }
+              }
+            ],
+            "authorityRoles": [
+              {
+                "id": "owner",
+                "name": "业务负责人",
+                "kind": "human"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "specVersion": "0.1.0-draft.7",
+      "id": "urn:example:ai-work:team-a",
+      "revision": "3",
+      "kind": "organization",
+      "name": "协作组 A 示例",
+      "instructions": "按所列工作合同承担责任，遵守来源、授权、交接与验收要求。",
+      "extensions": [
+        {
+          "id": "urn:teloa:profile:ai-work",
+          "version": "0.1.0-draft.2",
+          "required": true,
+          "data": {
+            "responsibility": {
+              "triggers": [
+                "本人或已授权任务交办"
+              ],
+              "autonomousActions": [
+                "只在本次已授权范围整理证据与形成成果"
+              ],
+              "confirmationPoints": [
+                "业务采用及外部动作由对应可信主体确认"
+              ],
+              "escalationRules": [
+                "输入不足、权限缺失或无进展时说明缺口"
+              ],
+              "deliveryChecks": [
+                "事实、推断与未知分开，保留证据"
+              ]
+            },
+            "resources": [],
+            "works": [
+              {
+                "id": "deliver",
+                "title": "组织研判与复核",
+                "instructions": "组织研判与复核；保留来源，不将工具返回当作最终业务采用。",
+                "inputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                },
+                "outputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "report": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "review": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "report",
+                    "evidence",
+                    "review"
+                  ],
+                  "additionalProperties": false
+                },
+                "requires": [],
+                "responsible": "member/analyst",
+                "acceptance": {
+                  "criteria": [
+                    "输入输出符合合同，证据可定位，未知已明确；验收者独立于研判、复核意见及汇总的实际贡献者"
+                  ],
+                  "reviewer": "authority/owner",
+                  "independent": true
+                }
+              }
+            ],
+            "authorityRoles": [
+              {
+                "id": "owner",
+                "name": "业务负责人",
+                "kind": "human"
+              }
+            ],
+            "collaboration": {
+              "roles": [
+                {
+                  "member": "analyst",
+                  "duty": "承担本组研判与交付协调",
+                  "participation": "member"
+                },
+                {
+                  "member": "quality",
+                  "duty": "按单项复核任务检查证据",
+                  "participation": "consultant"
+                }
+              ],
+              "coordinator": "member/analyst",
+              "handoffs": [
+                {
+                  "id": "review-report",
+                  "from": "member/analyst/inspect",
+                  "to": "member/quality/review",
+                  "when": "已有固定报告与证据且获得本项交接授权",
+                  "inputs": {
+                    "report": "report",
+                    "evidence": "evidence"
+                  }
+                }
+              ],
+              "sharing": [],
+              "stop": {
+                "maxHops": 4,
+                "maxNoProgress": 2,
+                "escalateTo": "authority/owner"
+              }
+            }
+          }
+        }
+      ],
+      "members": [
+        {
+          "id": "analyst",
+          "ref": {
+            "id": "urn:example:ai-work:analyst",
+            "revision": "2"
+          }
+        },
+        {
+          "id": "quality",
+          "ref": {
+            "id": "urn:example:ai-work:reviewer",
+            "revision": "2"
+          }
+        }
+      ]
+    },
+    {
+      "specVersion": "0.1.0-draft.7",
+      "id": "urn:example:ai-work:team-b",
+      "revision": "3",
+      "kind": "organization",
+      "name": "协作组 B 示例",
+      "instructions": "按所列工作合同承担责任，遵守来源、授权、交接与验收要求。",
+      "extensions": [
+        {
+          "id": "urn:teloa:profile:ai-work",
+          "version": "0.1.0-draft.2",
+          "required": true,
+          "data": {
+            "responsibility": {
+              "triggers": [
+                "本人或已授权任务交办"
+              ],
+              "autonomousActions": [
+                "只在本次已授权范围整理证据与形成成果"
+              ],
+              "confirmationPoints": [
+                "业务采用及外部动作由对应可信主体确认"
+              ],
+              "escalationRules": [
+                "输入不足、权限缺失或无进展时说明缺口"
+              ],
+              "deliveryChecks": [
+                "事实、推断与未知分开，保留证据"
+              ]
+            },
+            "resources": [],
+            "works": [
+              {
+                "id": "deliver",
+                "title": "组织研判与复核",
+                "instructions": "组织研判与复核；保留来源，不将工具返回当作最终业务采用。",
+                "inputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                },
+                "outputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "report": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "review": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "report",
+                    "evidence",
+                    "review"
+                  ],
+                  "additionalProperties": false
+                },
+                "requires": [],
+                "responsible": "member/analyst",
+                "acceptance": {
+                  "criteria": [
+                    "输入输出符合合同，证据可定位，未知已明确；验收者独立于研判、复核意见及汇总的实际贡献者"
+                  ],
+                  "reviewer": "authority/owner",
+                  "independent": true
+                }
+              }
+            ],
+            "authorityRoles": [
+              {
+                "id": "owner",
+                "name": "业务负责人",
+                "kind": "human"
+              }
+            ],
+            "collaboration": {
+              "roles": [
+                {
+                  "member": "analyst",
+                  "duty": "承担本组研判与交付协调",
+                  "participation": "member"
+                },
+                {
+                  "member": "quality",
+                  "duty": "按单项复核任务检查证据",
+                  "participation": "consultant"
+                }
+              ],
+              "coordinator": "member/analyst",
+              "handoffs": [
+                {
+                  "id": "review-report",
+                  "from": "member/analyst/inspect",
+                  "to": "member/quality/review",
+                  "when": "已有固定报告与证据且获得本项交接授权",
+                  "inputs": {
+                    "report": "report",
+                    "evidence": "evidence"
+                  }
+                }
+              ],
+              "sharing": [],
+              "stop": {
+                "maxHops": 4,
+                "maxNoProgress": 2,
+                "escalateTo": "authority/owner"
+              }
+            }
+          }
+        }
+      ],
+      "members": [
+        {
+          "id": "analyst",
+          "ref": {
+            "id": "urn:example:ai-work:analyst",
+            "revision": "2"
+          }
+        },
+        {
+          "id": "quality",
+          "ref": {
+            "id": "urn:example:ai-work:reviewer",
+            "revision": "2"
+          }
+        }
+      ]
+    },
+    {
+      "specVersion": "0.1.0-draft.7",
+      "id": "urn:example:ai-work:organization",
+      "revision": "3",
+      "kind": "organization",
+      "name": "AI 组织组合示例",
+      "instructions": "按所列工作合同承担责任，遵守来源、授权、交接与验收要求。",
+      "extensions": [
+        {
+          "id": "urn:teloa:profile:ai-work",
+          "version": "0.1.0-draft.2",
+          "required": true,
+          "data": {
+            "responsibility": {
+              "triggers": [
+                "本人或已授权任务交办"
+              ],
+              "autonomousActions": [
+                "只在本次已授权范围整理证据与形成成果"
+              ],
+              "confirmationPoints": [
+                "业务采用及外部动作由对应可信主体确认"
+              ],
+              "escalationRules": [
+                "输入不足、权限缺失或无进展时说明缺口"
+              ],
+              "deliveryChecks": [
+                "事实、推断与未知分开，保留证据"
+              ]
+            },
+            "resources": [
+              {
+                "id": "changes",
+                "title": "组织变更策略示例",
+                "purpose": "policy",
+                "binding": {
+                  "kind": "resource",
+                  "config": {
+                    "uri": "urn:example:ai-work:change-policy:1",
+                    "mediaType": "application/json",
+                    "digest": "sha256:e3c59e5386155953f61d5999693c2b1f91afb55441f946f1b703c744ce925239"
+                  }
+                }
+              }
+            ],
+            "works": [
+              {
+                "id": "deliver",
+                "title": "组织协调两组交付",
+                "instructions": "组织协调两组交付；保留来源，不将工具返回当作最终业务采用。",
+                "inputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "evidence"
+                  ],
+                  "additionalProperties": false
+                },
+                "outputs": {
+                  "$schema": "https://json-schema.org/draft/2020-12/schema",
+                  "type": "object",
+                  "properties": {
+                    "report": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "evidence": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "review": {
+                      "type": "string",
+                      "minLength": 1
+                    }
+                  },
+                  "required": [
+                    "report",
+                    "evidence",
+                    "review"
+                  ],
+                  "additionalProperties": false
+                },
+                "requires": [],
+                "responsible": "member/team-a",
+                "acceptance": {
+                  "criteria": [
+                    "输入输出符合合同，证据可定位，未知已明确；验收者独立于研判、复核意见及汇总的实际贡献者"
+                  ],
+                  "reviewer": "authority/owner",
+                  "independent": true
+                }
+              }
+            ],
+            "authorityRoles": [
+              {
+                "id": "owner",
+                "name": "业务负责人",
+                "kind": "human"
+              }
+            ],
+            "collaboration": {
+              "roles": [
+                {
+                  "member": "team-a",
+                  "duty": "负责分配至 A 组的工作",
+                  "participation": "member"
+                },
+                {
+                  "member": "team-b",
+                  "duty": "负责分配至 B 组的工作",
+                  "participation": "member"
+                }
+              ],
+              "handoffs": [],
+              "sharing": [],
+              "stop": {
+                "maxHops": 6,
+                "maxNoProgress": 2,
+                "escalateTo": "authority/owner"
+              }
+            },
+            "governance": {
+              "accountable": "authority/owner",
+              "changePolicyRef": "changes"
+            }
+          }
+        }
+      ],
+      "members": [
+        {
+          "id": "team-a",
+          "ref": {
+            "id": "urn:example:ai-work:team-a",
+            "revision": "3"
+          }
+        },
+        {
+          "id": "team-b",
+          "ref": {
+            "id": "urn:example:ai-work:team-b",
+            "revision": "3"
+          }
+        }
+      ]
+    }
+  ],
+  "resourceDocuments": [
+    {
+      "uri": "urn:example:ai-work:change-policy:1",
+      "content": "{\"accountable\":\"authority/owner\",\"format\":\"example.organization-change-policy/v1\",\"rules\":[\"新任职、撤任、暂停及约束变化由业务负责人明确决定并留存记录。\",\"不把旧任务静默转移给新成员；保留旧版本并明确恢复、终止或新建任务。\",\"组织成员关系不自动扩大数据与工具权限。\"],\"version\":\"1\"}"
+    }
+  ],
+  "bindingExamples": [
+    {
+      "path": [],
+      "instanceKey": "organization-1",
+      "intent": "new"
+    },
+    {
+      "path": [
+        "team-a"
+      ],
+      "instanceKey": "team-a-1",
+      "intent": "new"
+    },
+    {
+      "path": [
+        "team-b"
+      ],
+      "instanceKey": "team-b-1",
+      "intent": "new"
+    },
+    {
+      "path": [
+        "team-a",
+        "analyst"
+      ],
+      "instanceKey": "analyst-1",
+      "intent": "new"
+    },
+    {
+      "path": [
+        "team-b",
+        "analyst"
+      ],
+      "instanceKey": "analyst-1",
+      "intent": "reuse"
+    },
+    {
+      "path": [
+        "team-a",
+        "quality"
+      ],
+      "instanceKey": "reviewer-1",
+      "intent": "new"
+    },
+    {
+      "path": [
+        "team-b",
+        "quality"
+      ],
+      "instanceKey": "reviewer-1",
+      "intent": "reuse"
+    }
+  ],
+  "illustrativeInputs": {
+    "evidence": "合成的已提供材料，只用于输入结构检查。"
+  },
+  "illustrativeOutputs": {
+    "report": "示意报告，不是实际安全研判。",
+    "evidence": "合成材料引用"
+  },
+  "expected": {
+    "definitionCount": 5,
+    "sharedAnalystPaths": 2,
+    "sharedReviewerPaths": 2,
+    "analystMissingApplication": {
+      "inspect": "dependencies-satisfied-only",
+      "query": "blocked:alerts"
+    },
+    "organization": "governance-handler-and-authorization-not-verified",
+    "liveExecution": false,
+    "compositionMapping": "fields-declared-but-native-handler-and-authorization-not-verified"
+  },
+  "compositionMappingExamples": {
+    "notice": "本节是宿主适配报告的示意记录，不是新增标准字段；映射处理者未配置，不能声明就绪。",
+    "items": [
+      {
+        "definition": {
+          "id": "urn:example:ai-work:team-a",
+          "revision": "3"
+        },
+        "work": "deliver",
+        "inputDistribution": [
+          {
+            "field": "evidence",
+            "member": "analyst",
+            "work": "inspect",
+            "targetField": "evidence"
+          }
+        ],
+        "outputAssembly": {
+          "report": {
+            "member": "analyst",
+            "work": "inspect",
+            "field": "report"
+          },
+          "evidence": {
+            "member": "analyst",
+            "work": "inspect",
+            "field": "evidence"
+          },
+          "review": {
+            "member": "quality",
+            "work": "review",
+            "field": "review"
+          }
+        },
+        "handler": "unbound",
+        "status": "not-ready",
+        "integrityChecker": "unbound"
+      },
+      {
+        "definition": {
+          "id": "urn:example:ai-work:team-b",
+          "revision": "3"
+        },
+        "work": "deliver",
+        "inputDistribution": [
+          {
+            "field": "evidence",
+            "member": "analyst",
+            "work": "inspect",
+            "targetField": "evidence"
+          }
+        ],
+        "outputAssembly": {
+          "report": {
+            "member": "analyst",
+            "work": "inspect",
+            "field": "report"
+          },
+          "evidence": {
+            "member": "analyst",
+            "work": "inspect",
+            "field": "evidence"
+          },
+          "review": {
+            "member": "quality",
+            "work": "review",
+            "field": "review"
+          }
+        },
+        "handler": "unbound",
+        "status": "not-ready",
+        "integrityChecker": "unbound"
+      },
+      {
+        "definition": {
+          "id": "urn:example:ai-work:organization",
+          "revision": "3"
+        },
+        "work": "deliver",
+        "inputDistribution": [
+          {
+            "field": "evidence",
+            "member": "team-a",
+            "work": "deliver",
+            "targetField": "evidence"
+          }
+        ],
+        "outputAssembly": {
+          "report": {
+            "member": "team-a",
+            "work": "deliver",
+            "field": "report"
+          },
+          "evidence": {
+            "member": "team-a",
+            "work": "deliver",
+            "field": "evidence"
+          },
+          "review": {
+            "member": "team-a",
+            "work": "deliver",
+            "field": "review"
+          }
+        },
+        "handler": "unbound",
+        "status": "not-ready",
+        "integrityChecker": "unbound"
+      }
+    ]
+  }
+}

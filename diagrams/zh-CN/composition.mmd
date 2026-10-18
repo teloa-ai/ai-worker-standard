@@ -1,0 +1,10 @@
+flowchart TB
+    O["AI Org<br/>组织责任 · 资源约束 · 变更规则"]
+    O --> T1["AI Team A<br/>共同成果 · 分工 · 交接 · 验收"]
+    O --> T2["AI Team B<br/>共同成果 · 分工 · 交接 · 验收"]
+    T1 --> A["AI Worker<br/>研判与调查"]
+    T2 --> B["AI Worker<br/>检测工程"]
+    T1 -. "按任务参与" .-> Q["共享质检 Worker<br/>同一实例，分别核对资料权限"]
+    T2 -. "按任务参与" .-> Q
+    classDef main fill:#164e63,color:#fff,stroke:#164e63
+    class O main

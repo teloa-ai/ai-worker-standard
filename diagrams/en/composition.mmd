@@ -1,0 +1,10 @@
+flowchart TB
+    O["AI Organization<br/>Accountability · Resource constraints · Change rules"]
+    O --> T1["AI Team A<br/>Shared output · Roles · Handoffs · Acceptance"]
+    O --> T2["AI Team B<br/>Shared output · Roles · Handoffs · Acceptance"]
+    T1 --> A["AI Worker<br/>Triage and investigation"]
+    T2 --> B["AI Worker<br/>Detection engineering"]
+    T1 -. "Per-task participation" .-> Q["Shared quality Worker<br/>One instance, separately authorized contexts"]
+    T2 -. "Per-task participation" .-> Q
+    classDef main fill:#164e63,color:#fff,stroke:#164e63
+    class O main

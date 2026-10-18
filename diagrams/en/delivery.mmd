@@ -1,0 +1,16 @@
+sequenceDiagram
+    participant O as Task owner
+    participant H as Host / coordinator
+    participant A as Analyst Worker
+    participant Q as Review Worker
+    O->>H: Assign team work, inputs and authority
+    H->>H: Check contracts, dependencies and bindings
+    H->>A: Distribute authorized input and establish assignment
+    A-->>H: Fixed report and evidence versions
+    H->>Q: Hand off report and required evidence
+    Q-->>H: Accept or reject receipt
+    Note over H,Q: Continue only after accepted receipt
+    Q-->>H: Fixed review
+    H->>H: Assemble fixed sources and check completeness
+    H-->>O: Deliver artifact package and contributor record
+    O->>O: Accept this version and decide adoption separately
