@@ -46,7 +46,7 @@ Grok's design describes a persistent Bot and separates reusable Skills from Rout
 
 The Team Bot documentation describes one Bot shared by people, private conversations, and routines belonging to their creator. Its connector authentication can use the current person or the Bot's own configured credential. An adapter must preserve those distinctions instead of merging user permissions or routines. [Team Bots](https://docs.x.ai/grok-bot/team-bots)
 
-**共享 Worker 与 AI Team：**多人使用同一 Bot，是一个 Worker 面向多个使用者。多个 Worker 分担一份共同成果，才进一步核对 Team 合同。一个产品可以同时具备这两种关系。
+**共享 Worker 与 AI Team：** 多人使用同一 Bot，是一个 Worker 面向多个使用者。多个 Worker 分担一份共同成果，才进一步核对 Team 合同。一个产品可以同时具备这两种关系。
 
 个人例行只留在按所有者和可见范围隔离的宿主安排中。只有作者明确把它发布为去除私有内容的模板，才可以进入定义的 `routines`；模板导入后仍不启用。无法保留这些范围时，报告无法映射，不能静默丢失或转成全员任务。
 
