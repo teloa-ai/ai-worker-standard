@@ -8,6 +8,10 @@ These mappings are the authors' interpretation of the cited product documents an
 
 ## Teloa
 
+Teloa’s **AI employee** is the product expression of an **AI Worker**. The product name describes what people create and work with; the standard provides the underlying definition and instance model. An AI team uses the Team contract to describe members, handoffs and shared deliverables. Conformance still requires checking the actual contracts and host behavior.
+
+Teloa 的 **AI 员工**是 **AI Worker** 在产品中的具体表达。用户创建和协作的对象仍叫 AI 员工；技术上，Worker 定义说明它的职责和工作合同，Worker 实例标识一位具体员工。AI 团队通过 Team 合同说明成员分工、交接与共同成果。是否符合标准，仍需核对实际合同与宿主行为。
+
 | Teloa concept | Target | Required handling |
 | --- | --- | --- |
 | AI employee / AI 员工 | Worker | Preserve the role definition, adopted revision and actual instance separately |

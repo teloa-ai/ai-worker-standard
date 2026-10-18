@@ -2,19 +2,21 @@
 
 **Max Luo and Morgan Chen, co-founders of Teloa** · 18 October 2026
 
-A name and a role prompt are enough to start experimenting. A second assignment raises more practical questions: is this the same worker as before? Which material did it use? What reached the next member? Who decides whether to accept the result?
+In Teloa, people create and work with **AI employees**. **AI Worker is the underlying standards concept**: it describes how an AI employee works through persistent identity, responsibilities, work contracts and collaboration boundaries. The standard also describes how AI employees form teams and agree on deliverables.
 
-The AI Worker standard connects persistent identity, responsibilities, work interfaces and acceptance. It gives products a way to describe what an AI work entity undertakes, and gives users a way to check its deliverables.
+A name and a role prompt are enough to start experimenting with an AI employee. A second assignment raises more practical questions: is this the same AI employee as before? Which material did it use? What reached the next member? Who decides whether to accept the result?
+
+The AI Worker standard makes these agreements explicit, so people can check what an AI employee undertakes and delivers, using technical terms that can be shared across products.
 
 This guide introduces **AI Worker Standard 1.0**, including its core and work profile. Examples are teaching material, not customer results or execution evidence. The [Chinese specifications](../spec/core.zh-CN.md) are normative for this edition.
 
-## What makes up a Worker
+## What makes up an AI employee
 
-Consider a document-summary worker. Its job is to summarize supplied material and list unanswered questions. It can perform this job repeatedly using different models. Each result still belongs to a particular Worker instance and records the definition revision used.
+Consider an AI employee responsible for document summaries. Its job is to summarize supplied material and list unanswered questions. It can perform this job repeatedly using different models. Each result still belongs to the same AI employee, represented technically by a particular Worker instance, and records the definition revision used.
 
 ![Five groups of Worker components](../diagrams/en/worker.png)
 
-| Component group | A concrete summary-worker configuration |
+| Component group | A document-summary AI employee’s configuration |
 | --- | --- |
 | Role and responsibilities | Summarize supplied material; report contradictions without inventing facts |
 | Methods and evidence | The current input; add Skills, knowledge or procedures when the job needs them |
@@ -67,7 +69,7 @@ This is an expressible organization structure. A product needs binding, authoriz
 
 ## Definition, instance and Run
 
-A definition describes a role and its work contracts. An instance is the particular worker in a deployment. A Run is one execution by that worker. A template update preserves the versions used by old Runs; changing a model does not require assigning the worker's history to a new identity.
+A Worker definition describes an AI employee’s role and work contracts. A Worker instance corresponds to a particular AI employee in Teloa. A Run is one execution by that employee. A template update preserves the versions used by old Runs; changing a model does not require assigning the worker's history to a new identity.
 
 ![Definitions, host bindings, execution and deliverables](../diagrams/en/architecture.png)
 
@@ -101,7 +103,7 @@ The same relationship applies to SOC work. If teaching material contains only on
 
 ## Mapping Grok Bot and Teloa
 
-Teloa calls its product entity an AI employee; Grok calls it a Bot. This standard uses Worker for a common definition while checking each contract. Grok's public design describes persistent Bots and components such as Skills and Routines. It supports a conceptual comparison, not a claim that a converter or official compatibility certification exists. [Grok design](https://x.ai/news/designing-grok-bot)
+Teloa’s AI employee is the product expression of an AI Worker; Grok Bot can also be described as an AI Worker. AI employee and Bot remain the product concepts. AI Worker supplies a shared technical definition, with responsibilities, work contracts and host behavior checked during adaptation. Grok's public design describes persistent Bots and components such as Skills and Routines. It supports a conceptual comparison, not a claim that a converter or official compatibility certification exists. [Grok design](https://x.ai/news/designing-grok-bot)
 
 | Product concept | Standard counterpart | Check during adaptation |
 | --- | --- | --- |

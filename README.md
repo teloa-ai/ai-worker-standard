@@ -34,7 +34,7 @@ JSON is the normative exchange format. YAML is an optional authoring format with
 
 ## Where existing products fit
 
-Teloa's **AI employee** and Grok's **Bot** can be mapped to a Worker when their definitions and host behavior satisfy the contracts. Grok's **Team Bot** is a shared Bot: it is not, by its name alone, a team of multiple AI Workers. The [mapping guide](docs/mappings.md) explains the distinction and the checks still required.
+Teloa’s **AI employee** is the product expression of an **AI Worker**. People create AI employees and form AI teams; Worker definitions and instances describe their identity, responsibilities and work contracts, while Team contracts describe collaboration and delivery. Grok’s **Bot** can also be described as an AI Worker. A conforming mapping requires the definitions and host behavior to satisfy the contracts; the products retain their own names. Grok's **Team Bot** is a shared Bot: it is not, by its name alone, a team of multiple AI Workers. The [mapping guide](docs/mappings.md) explains the distinction and the checks still required.
 
 OASF contributes discovery metadata and taxonomies. Oracle Agent Spec contributes useful ideas for component references, interfaces and composition. Reusing these ideas is not a claim of complete format or runtime compatibility. The mapping guide links the primary sources and records the boundaries.
 
