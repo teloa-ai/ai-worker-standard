@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1060" viewBox="0 0 1200 1060" role="img" aria-label="从 AI 员工，到 AI Team 与 AI Org"><title>从 AI 员工，到 AI Team 与 AI Org</title><desc>团队围绕共同成果协作；组织进一步规定责任、资源与变更。</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#2f6b52" stroke-width="1.5"/></marker><marker id="amber" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#8d6021" stroke-width="1.5"/></marker></defs><g font-family="Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, Arial, sans-serif"><rect width="1200" height="1060" fill="#f7f9f6"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1060" viewBox="0 0 1200 1060" role="img" aria-label="从 AI 员工，到 AI 团队与 AI Org"><title>从 AI 员工，到 AI 团队与 AI Org</title><desc>以 Teloa 为例：AI 员工对应 Worker；AI 团队用 Team 合同约定协作交付。</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#2f6b52" stroke-width="1.5"/></marker><marker id="amber" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#8d6021" stroke-width="1.5"/></marker></defs><g font-family="Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, Arial, sans-serif"><rect width="1200" height="1060" fill="#f7f9f6"/>
 <text x="56" y="53" fill="#2f6b52" font-size="17" font-weight="650" text-anchor="start"><tspan x="56" dy="0">02 / ORGANIZATIONAL COMPOSITION</tspan></text>
 <text x="1144" y="53" fill="#526b5e" font-size="16" font-weight="500" text-anchor="end"><tspan x="1144" dy="0">AI WORKER STANDARD 1.0</tspan></text>
-<text x="56" y="116" fill="#223b30" font-size="40" font-weight="650" text-anchor="start"><tspan x="56" dy="0">从 AI 员工，到 AI Team 与 AI Org</tspan></text>
-<text x="56" y="160" fill="#526b5e" font-size="23" font-weight="400" text-anchor="start"><tspan x="56" dy="0">团队围绕共同成果协作；组织进一步规定责任、资源与变更。</tspan></text>
+<text x="56" y="116" fill="#223b30" font-size="40" font-weight="650" text-anchor="start"><tspan x="56" dy="0">从 AI 员工，到 AI 团队与 AI Org</tspan></text>
+<text x="56" y="160" fill="#526b5e" font-size="23" font-weight="400" text-anchor="start"><tspan x="56" dy="0">以 Teloa 为例：AI 员工对应 Worker；AI 团队用 Team 合同约定协作交付。</tspan></text>
 <path d="M56 192 H1144" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
 <rect x="280" y="234" width="640" height="137" rx="16" fill="#223b30" stroke="#223b30" stroke-width="1.5"/>
 <text x="304" y="268" fill="#bfd8c8" font-size="16" font-weight="650" text-anchor="start"><tspan x="304" dy="0">组织治理</tspan></text>
@@ -11,11 +11,11 @@
 <path d="M600 371 V400 H310 V435" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
 <path d="M600 400 H890 V435" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
 <rect x="56" y="435" width="508" height="151" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
-<text x="80" y="473" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">AI Team A</tspan></text>
-<text x="80" y="507" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="80" dy="0">共同成果 · 岗位分工</tspan><tspan x="80" dy="26">成员交接 · 成果验收</tspan></text>
+<text x="80" y="473" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">AI 团队 A</tspan></text>
+<text x="80" y="507" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="80" dy="0">Team 合同：共同成果与分工</tspan><tspan x="80" dy="26">成员交接 · 成果验收</tspan></text>
 <rect x="636" y="435" width="508" height="151" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
-<text x="660" y="473" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="660" dy="0">AI Team B</tspan></text>
-<text x="660" y="507" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="660" dy="0">共同成果 · 岗位分工</tspan><tspan x="660" dy="26">成员交接 · 成果验收</tspan></text>
+<text x="660" y="473" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="660" dy="0">AI 团队 B</tspan></text>
+<text x="660" y="507" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="660" dy="0">Team 合同：共同成果与分工</tspan><tspan x="660" dy="26">成员交接 · 成果验收</tspan></text>
 <path d="M215 586 V698" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
 <path d="M985 586 V698" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
 <path d="M564 512 H600 V698" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" stroke-dasharray="7 7" marker-end="url(#arrow)"/>
@@ -23,16 +23,16 @@
 <rect x="490" y="618" width="220" height="40" rx="4" fill="#f7f9f6" stroke="#f7f9f6" stroke-width="1.5"/>
 <text x="600" y="646" fill="#2f6b52" font-size="19" font-weight="500" text-anchor="middle"><tspan x="600" dy="0">按任务参与</tspan></text>
 <rect x="56" y="698" width="320" height="175" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
-<text x="80" y="732" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="80" dy="0">团队 A 的工作</tspan></text>
-<text x="80" y="770" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">AI Worker</tspan></text>
+<text x="80" y="732" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="80" dy="0">团队 A · Worker 实例</tspan></text>
+<text x="80" y="770" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">AI 员工</tspan></text>
 <text x="80" y="804" fill="#526b5e" font-size="22" font-weight="400" text-anchor="start"><tspan x="80" dy="0">初步研判</tspan><tspan x="80" dy="28.6">深度调查</tspan></text>
 <rect x="824" y="698" width="320" height="175" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
-<text x="848" y="732" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="848" dy="0">团队 B 的工作</tspan></text>
-<text x="848" y="770" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="848" dy="0">AI Worker</tspan></text>
+<text x="848" y="732" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="848" dy="0">团队 B · Worker 实例</tspan></text>
+<text x="848" y="770" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="848" dy="0">AI 员工</tspan></text>
 <text x="848" y="804" fill="#526b5e" font-size="22" font-weight="400" text-anchor="start"><tspan x="848" dy="0">检测工程</tspan><tspan x="848" dy="28.6">规则与离线验证</tspan></text>
 <rect x="414" y="698" width="372" height="175" rx="16" fill="#e9f1eb" stroke="#2f6b52" stroke-width="1.5"/>
-<text x="440" y="734" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="440" dy="0">共享同一实例</tspan></text>
-<text x="440" y="774" fill="#223b30" font-size="27" font-weight="650" text-anchor="start"><tspan x="440" dy="0">质检 AI Worker</tspan></text>
+<text x="440" y="734" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="440" dy="0">共享同一 Worker 实例</tspan></text>
+<text x="440" y="774" fill="#223b30" font-size="27" font-weight="650" text-anchor="start"><tspan x="440" dy="0">质检 AI 员工</tspan></text>
 <text x="440" y="814" fill="#526b5e" font-size="22" font-weight="400" text-anchor="start"><tspan x="440" dy="0">同一名员工，分别核对</tspan><tspan x="440" dy="31.9">每项工作的资料与权限。</tspan></text>
 <path d="M56 926 H100" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
 <text x="114" y="933" fill="#526b5e" font-size="21" font-weight="400" text-anchor="start"><tspan x="114" dy="0">组合与分工关系</tspan></text>

@@ -1,10 +1,11 @@
 flowchart TB
+    %% A Teloa example: Worker definitions, AI employee instances and Runs are recorded separately.
     D["Exchange definition · Core<br/>id / revision / kind / member references"] --> W["Required work profile<br/>Responsibility / I/O / dependencies<br/>Collaboration / acceptance"]
     W --> V{"Contracts and required<br/>capabilities supported?"}
     V -- "No" --> N["Retain definition and report gaps<br/>Affected work is not ready"]
-    V -- "Yes" --> B["Host bindings and authorization<br/>Instance / data / connections / model / scope"]
-    B --> X["One Run<br/>Fixed input versions and effective authority"]
+    V -- "Yes" --> B["Teloa binds an AI employee and authority<br/>Worker instance / data / connections / model / scope"]
+    B --> X["One Run: one execution by the AI employee<br/>Fixed input versions and effective authority"]
     X --> A["Fixed artifact and actual contributors"]
     A --> R["Acceptance record<br/>Business adoption recorded separately"]
-    classDef main fill:#164e63,color:#fff,stroke:#164e63
+    classDef main fill:#223b30,color:#fff,stroke:#2f6b52
     class B,X main

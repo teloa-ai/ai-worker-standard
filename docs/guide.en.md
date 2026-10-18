@@ -14,7 +14,11 @@ This guide introduces **AI Worker Standard 1.0**, including its core and work pr
 
 Consider an AI employee responsible for document summaries. Its job is to summarize supplied material and list unanswered questions. It can perform this job repeatedly using different models. Each result still belongs to the same AI employee, represented technically by a particular Worker instance, and records the definition revision used.
 
-![Five groups of Worker components](../diagrams/en/worker.png)
+![Teloa AI employees and Grok Bots mapped to AI Worker, with five component groups](../diagrams/en/worker.png)
+
+*Teloa AI employees and Grok Bots mapped to AI Worker, with five component groups.*
+
+The arrows map concepts: Teloa retains AI employee as its product concept, and Grok retains Bot. Both can be described through AI Worker; the diagram itself does not establish completed adaptation or vendor certification.
 
 | Component group | A document-summary AI employee’s configuration |
 | --- | --- |
@@ -30,11 +34,13 @@ A complete Worker definition requires identity and revision, responsibilities an
 
 ## A team needs traceable handoffs
 
-For a material-review task, an analyst reads the evidence and a reviewer checks the conclusions. The team delivers a report and a review. A group chat supports communication; the team contract also specifies the shared deliverable, responsibilities, handoff conditions and stopping rules.
+For a material-review task, an analyst AI employee reads the evidence and a review AI employee checks the conclusions. The team delivers a report and a review. A group chat supports communication; the team contract also specifies the shared deliverable, responsibilities, handoff conditions and stopping rules.
 
 The composition has its own work interface. For example, `deliver` takes `evidence` and returns `report`, `evidence` and `review`. The coordinator or host must identify who receives the input, which fixed artifact supplies each output and who checks completeness. Without those mappings, the work is not ready.
 
-![Team delivery and acceptance](../diagrams/en/delivery.png)
+![Teloa AI employees collaborate under a Team contract; people approve and accept](../diagrams/en/delivery.png)
+
+*Teloa AI employees collaborate under a Team contract; people approve and accept.*
 
 This contract fragment comes from the [complete composition fixture](../examples/composition-fixture.json):
 
@@ -53,15 +59,17 @@ This contract fragment comes from the [complete composition fixture](../examples
 
 The keys in `inputs` name receiver fields; the values name sender output fields. The Chinese condition requires a fixed report and evidence plus authorization for the handoff. This definition does not dispatch a task. An actual handoff also records the actors, source Run, artifact version, permitted material and the receiver's acceptance or rejection. A message in a group does not establish that usable input reached the receiver.
 
-In the diagram, the reviewer contributes a review. The designated owner accepts the complete deliverable. Independence must be checked against actual contributors. A reviewer who edits the report becomes a contributor to that revision and cannot independently accept that same revision.
+In the diagram, the review AI employee contributes a review. The designated owner accepts the complete deliverable. Independence must be checked against actual contributors. A reviewer who edits the report becomes a contributor to that revision and cannot independently accept that same revision.
 
 ## What an AI Organization adds
 
 An organization composes teams and workers, with accountability, resource constraints and change rules across them. More members or another group-chat layer does not create those agreements.
 
-![An Organization composes teams and defines governance](../diagrams/en/composition.png)
+![Worker, AI Team and AI Org composition, illustrated with Teloa AI employees](../diagrams/en/composition.png)
 
-A security-operations organization could combine an investigation team and a detection-engineering team, with a shared quality reviewer. Sharing requires an explicit binding to the same instance. Two references to one role template do not prove that one employee occupies both slots.
+*Worker, AI Team and AI Org composition, illustrated with Teloa AI employees.*
+
+A security-operations organization could combine an investigation team and a detection-engineering team, with a shared quality AI employee. Sharing requires an explicit binding to the same instance. Two references to one role template do not prove that one employee occupies both slots.
 
 The organization also identifies who is accountable, who appoints or removes members, how paused work is handled, and which data or budget constraints apply to which members. A worker serving two teams does not automatically gain both teams' histories or double a shared budget.
 
@@ -71,7 +79,9 @@ This is an expressible organization structure. A product needs binding, authoriz
 
 A Worker definition describes an AI employee’s role and work contracts. A Worker instance corresponds to a particular AI employee in Teloa. A Run is one execution by that employee. A template update preserves the versions used by old Runs; changing a model does not require assigning the worker's history to a new identity.
 
-![Definitions, host bindings, execution and deliverables](../diagrams/en/architecture.png)
+![A Teloa example: Worker definition, AI employee instance, Run and acceptance](../diagrams/en/architecture.png)
+
+*A Teloa example: Worker definition, AI employee instance, Run and acceptance.*
 
 The core format retains two kinds: `agent` and `organization`. A Worker adds the required work profile to `agent`. A Team adds collaboration to `organization`. An Organization also supplies governance. The same reference and revision rules serve all three arrangements.
 

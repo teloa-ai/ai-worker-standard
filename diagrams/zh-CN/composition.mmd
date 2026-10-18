@@ -1,10 +1,11 @@
 flowchart TB
+    %% 以 Teloa AI 员工为例：Worker、Team 与 Org 的组成，不代表已部署。
     O["AI Org<br/>组织责任 · 资源约束 · 变更规则"]
-    O --> T1["AI Team A<br/>共同成果 · 分工 · 交接 · 验收"]
-    O --> T2["AI Team B<br/>共同成果 · 分工 · 交接 · 验收"]
-    T1 --> A["AI Worker<br/>研判与调查"]
-    T2 --> B["AI Worker<br/>检测工程"]
-    T1 -. "按任务参与" .-> Q["共享质检 Worker<br/>同一实例，分别核对资料权限"]
+    O --> T1["AI 团队 A · Team 合同<br/>共同成果 · 分工 · 交接 · 验收"]
+    O --> T2["AI 团队 B · Team 合同<br/>共同成果 · 分工 · 交接 · 验收"]
+    T1 --> A["AI 员工 · Worker 实例<br/>研判与调查"]
+    T2 --> B["AI 员工 · Worker 实例<br/>检测工程"]
+    T1 -. "按任务参与" .-> Q["共享质检 AI 员工<br/>同一 Worker 实例，分别核对资料权限"]
     T2 -. "按任务参与" .-> Q
-    classDef main fill:#164e63,color:#fff,stroke:#164e63
+    classDef main fill:#223b30,color:#fff,stroke:#2f6b52
     class O main

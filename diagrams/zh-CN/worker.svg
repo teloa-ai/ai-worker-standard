@@ -1,48 +1,52 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1000" viewBox="0 0 1200 1000" role="img" aria-label="一个 AI Worker，由什么组成"><title>一个 AI Worker，由什么组成</title><desc>身份和职责跨任务延续；工作在授权范围内，成果可以验收。</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#2f6b52" stroke-width="1.5"/></marker><marker id="amber" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#8d6021" stroke-width="1.5"/></marker></defs><g font-family="Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, Arial, sans-serif"><rect width="1200" height="1000" fill="#f7f9f6"/>
-<text x="56" y="53" fill="#2f6b52" font-size="17" font-weight="650" text-anchor="start"><tspan x="56" dy="0">01 / WORKER COMPOSITION</tspan></text>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1030" viewBox="0 0 1200 1030" role="img" aria-label="AI 员工与 AI Worker 的关系"><title>AI 员工与 AI Worker 的关系</title><desc>Teloa 的产品叫 AI 员工；AI Worker 为其提供通用技术定义。</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#2f6b52" stroke-width="1.5"/></marker><marker id="amber" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#8d6021" stroke-width="1.5"/></marker></defs><g font-family="Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, Arial, sans-serif"><rect width="1200" height="1030" fill="#f7f9f6"/>
+<text x="56" y="53" fill="#2f6b52" font-size="17" font-weight="650" text-anchor="start"><tspan x="56" dy="0">01 / PRODUCT AND STANDARD</tspan></text>
 <text x="1144" y="53" fill="#526b5e" font-size="16" font-weight="500" text-anchor="end"><tspan x="1144" dy="0">AI WORKER STANDARD 1.0</tspan></text>
-<text x="56" y="116" fill="#223b30" font-size="40" font-weight="650" text-anchor="start"><tspan x="56" dy="0">一个 AI Worker，由什么组成</tspan></text>
-<text x="56" y="160" fill="#526b5e" font-size="23" font-weight="400" text-anchor="start"><tspan x="56" dy="0">身份和职责跨任务延续；工作在授权范围内，成果可以验收。</tspan></text>
+<text x="56" y="116" fill="#223b30" font-size="40" font-weight="650" text-anchor="start"><tspan x="56" dy="0">AI 员工与 AI Worker 的关系</tspan></text>
+<text x="56" y="160" fill="#526b5e" font-size="23" font-weight="400" text-anchor="start"><tspan x="56" dy="0">Teloa 的产品叫 AI 员工；AI Worker 为其提供通用技术定义。</tspan></text>
 <path d="M56 192 H1144" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
-<rect x="56" y="248" width="320" height="565" rx="20" fill="#223b30" stroke="#223b30" stroke-width="1.5"/>
-<text x="88" y="300" fill="#bdd6c7" font-size="17" font-weight="650" text-anchor="start"><tspan x="88" dy="0">AI WORKER</tspan></text>
-<text x="88" y="365" fill="#fff" font-size="33" font-weight="650" text-anchor="start"><tspan x="88" dy="0">一个工作个体</tspan><tspan x="88" dy="47.85">持续承担职责</tspan></text>
-<path d="M88 444 H344" fill="none" stroke="#537363" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="88" y="490" fill="#e2eee5" font-size="25" font-weight="500" text-anchor="start"><tspan x="88" dy="0">身份与固定修订</tspan><tspan x="88" dy="45">职责与判断边界</tspan><tspan x="88" dy="45">工作合同与验收</tspan></text>
-<text x="88" y="710" fill="#bfd8c8" font-size="20" font-weight="400" text-anchor="start"><tspan x="88" dy="0">可以调用多个模型和 Agent</tspan><tspan x="88" dy="29">不要求独占机器或常驻进程</tspan></text>
-<path d="M376 530 H404 M404 296 V772" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-<path d="M404 296 H432" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-<rect x="432" y="248" width="712" height="89" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
-<circle cx="468" cy="292" r="21" fill="#e9f1eb"/>
-<text x="468" y="299" fill="#2f6b52" font-size="19" font-weight="650" text-anchor="middle"><tspan x="468" dy="0">01</tspan></text>
-<text x="506" y="282" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="506" dy="0">岗位与职责</tspan></text>
-<text x="506" y="315" fill="#526b5e" font-size="21" font-weight="400" text-anchor="start"><tspan x="506" dy="0">接手 · 判断 · 确认 · 升级</tspan></text>
-<path d="M404 415 H432" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-<rect x="432" y="367" width="712" height="89" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
-<circle cx="468" cy="411" r="21" fill="#e9f1eb"/>
-<text x="468" y="418" fill="#2f6b52" font-size="19" font-weight="650" text-anchor="middle"><tspan x="468" dy="0">02</tspan></text>
-<text x="506" y="401" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="506" dy="0">方法与依据</tspan></text>
-<text x="506" y="434" fill="#526b5e" font-size="21" font-weight="400" text-anchor="start"><tspan x="506" dy="0">Skills · 知识 · SOP</tspan></text>
-<path d="M404 534 H432" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-<rect x="432" y="486" width="712" height="89" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
-<circle cx="468" cy="530" r="21" fill="#e9f1eb"/>
-<text x="468" y="537" fill="#2f6b52" font-size="19" font-weight="650" text-anchor="middle"><tspan x="468" dy="0">03</tspan></text>
-<text x="506" y="520" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="506" dy="0">工作与安排</tspan></text>
-<text x="506" y="553" fill="#526b5e" font-size="21" font-weight="400" text-anchor="start"><tspan x="506" dy="0">输入输出 · 按需配置的例行任务</tspan></text>
-<path d="M404 653 H432" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-<rect x="432" y="605" width="712" height="89" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
-<circle cx="468" cy="649" r="21" fill="#e9f1eb"/>
-<text x="468" y="656" fill="#2f6b52" font-size="19" font-weight="650" text-anchor="middle"><tspan x="468" dy="0">04</tspan></text>
-<text x="506" y="639" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="506" dy="0">执行条件</tspan></text>
-<text x="506" y="672" fill="#526b5e" font-size="21" font-weight="400" text-anchor="start"><tspan x="506" dy="0">应用工具 · 资料范围 · 有效授权</tspan></text>
-<path d="M404 772 H432" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
-<rect x="432" y="724" width="712" height="89" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
-<circle cx="468" cy="768" r="21" fill="#e9f1eb"/>
-<text x="468" y="775" fill="#2f6b52" font-size="19" font-weight="650" text-anchor="middle"><tspan x="468" dy="0">05</tspan></text>
-<text x="506" y="758" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="506" dy="0">经验与成果</tspan></text>
-<text x="506" y="791" fill="#526b5e" font-size="21" font-weight="400" text-anchor="start"><tspan x="506" dy="0">记忆规则 · 固定成果 · 证据与验收</tspan></text>
-<rect x="432" y="856" width="712" height="40" rx="8" fill="#e9f1eb" stroke="#e9f1eb" stroke-width="1.5"/>
-<text x="450" y="883" fill="#2f6b52" font-size="20" font-weight="500" text-anchor="start"><tspan x="450" dy="0">Skills、知识、记忆和例行按工作需要配置。</tspan></text>
-<path d="M56 914 H1144" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
-<text x="56" y="955" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="56" dy="0">最小定义：身份与修订、职责边界，以及至少一项带验收要求的工作合同。</tspan></text>
+<text x="56" y="240" fill="#2f6b52" font-size="17" font-weight="650" text-anchor="start"><tspan x="56" dy="0">产品概念</tspan></text>
+<text x="410" y="240" fill="#2f6b52" font-size="17" font-weight="650" text-anchor="start"><tspan x="410" dy="0">通用标准概念</tspan></text>
+<text x="790" y="240" fill="#2f6b52" font-size="17" font-weight="650" text-anchor="start"><tspan x="790" dy="0">组成说明</tspan></text>
+<rect x="56" y="274" width="292" height="170" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="80" y="308" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="80" dy="0">TELOA</tspan></text>
+<text x="80" y="346" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">AI 员工</tspan></text>
+<text x="80" y="380" fill="#526b5e" font-size="22" font-weight="400" text-anchor="start"><tspan x="80" dy="0">用户创建和协作的</tspan><tspan x="80" dy="28.6">持续工作个体</tspan></text>
+<rect x="56" y="514" width="292" height="170" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="80" y="548" fill="#2f6b52" font-size="16" font-weight="650" text-anchor="start"><tspan x="80" dy="0">GROK</tspan></text>
+<text x="80" y="586" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">Bot</tspan></text>
+<text x="80" y="620" fill="#526b5e" font-size="22" font-weight="400" text-anchor="start"><tspan x="80" dy="0">另一种产品表达</tspan><tspan x="80" dy="28.6">同样可按 AI Worker 描述</tspan></text>
+<path d="M348 359 H377 V479 H410" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" marker-end="url(#arrow)"/>
+<path d="M348 599 H377 V479" fill="none" stroke="#2f6b52" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="410" y="274" width="322" height="530" rx="20" fill="#223b30" stroke="#223b30" stroke-width="1.5"/>
+<text x="438" y="318" fill="#bdd6c7" font-size="16" font-weight="650" text-anchor="start"><tspan x="438" dy="0">AI WORKER 标准</tspan></text>
+<text x="438" y="374" fill="#fff" font-size="33" font-weight="650" text-anchor="start"><tspan x="438" dy="0">AI Worker</tspan></text>
+<text x="438" y="422" fill="#fff" font-size="24" font-weight="500" text-anchor="start"><tspan x="438" dy="0">持续身份</tspan><tspan x="438" dy="34.8">明确职责</tspan></text>
+<path d="M438 493 H704" fill="none" stroke="#537363" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="438" y="540" fill="#e2eee5" font-size="22" font-weight="500" text-anchor="start"><tspan x="438" dy="0">明确工作输入与输出</tspan><tspan x="438" dy="37.4">在授权范围内执行</tspan><tspan x="438" dy="37.4">交付可验收的成果</tspan></text>
+<text x="438" y="719" fill="#bfd8c8" font-size="20" font-weight="400" text-anchor="start"><tspan x="438" dy="0">在 Teloa 中：</tspan><tspan x="438" dy="29">一个 Worker 实例</tspan><tspan x="438" dy="29">标识一位具体 AI 员工</tspan></text>
+<path d="M732 538 H758 M758 325 V793" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<path d="M758 325 H790" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="790" y="274" width="354" height="102" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="810" y="305" fill="#223b30" font-size="22" font-weight="650" text-anchor="start"><tspan x="810" dy="0">岗位与职责</tspan></text>
+<text x="810" y="335" fill="#526b5e" font-size="18" font-weight="400" text-anchor="start"><tspan x="810" dy="0">职责边界 · 判断与升级</tspan></text>
+<path d="M758 442 H790" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="790" y="391" width="354" height="102" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="810" y="422" fill="#223b30" font-size="22" font-weight="650" text-anchor="start"><tspan x="810" dy="0">方法与依据</tspan></text>
+<text x="810" y="452" fill="#526b5e" font-size="18" font-weight="400" text-anchor="start"><tspan x="810" dy="0">Skills · 知识 · SOP</tspan></text>
+<path d="M758 559 H790" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="790" y="508" width="354" height="102" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="810" y="539" fill="#223b30" font-size="22" font-weight="650" text-anchor="start"><tspan x="810" dy="0">工作与安排</tspan></text>
+<text x="810" y="569" fill="#526b5e" font-size="18" font-weight="400" text-anchor="start"><tspan x="810" dy="0">输入输出 · 按需例行</tspan></text>
+<path d="M758 676 H790" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="790" y="625" width="354" height="102" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="810" y="656" fill="#223b30" font-size="22" font-weight="650" text-anchor="start"><tspan x="810" dy="0">执行条件</tspan></text>
+<text x="810" y="686" fill="#526b5e" font-size="18" font-weight="400" text-anchor="start"><tspan x="810" dy="0">工具 · 资料 · 有效授权</tspan></text>
+<path d="M758 793 H790" fill="none" stroke="#d4dfd6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round"/>
+<rect x="790" y="742" width="354" height="102" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
+<text x="810" y="773" fill="#223b30" font-size="22" font-weight="650" text-anchor="start"><tspan x="810" dy="0">经验与成果</tspan></text>
+<text x="810" y="803" fill="#526b5e" font-size="18" font-weight="400" text-anchor="start"><tspan x="810" dy="0">记忆规则 · 成果与验收</tspan></text>
+<rect x="56" y="874" width="1088" height="52" rx="10" fill="#e9f1eb" stroke="#e9f1eb" stroke-width="1.5"/>
+<text x="78" y="907" fill="#2f6b52" font-size="22" font-weight="500" text-anchor="start"><tspan x="78" dy="0">产品保留各自名称；标准说明共同的身份、职责、工作合同与协作边界。</tspan></text>
+<path d="M56 944 H1144" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
+<text x="56" y="985" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="56" dy="0">概念对应不代表厂商认证；是否符合本标准，仍需核对实际合同与宿主行为。</tspan></text>
 </g></svg>

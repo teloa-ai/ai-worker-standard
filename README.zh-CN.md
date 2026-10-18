@@ -10,7 +10,7 @@ AI Worker 是身份和职责能够跨任务延续、在授权范围内工作、�
 
 AI Team 围绕共同成果组织多个工作成员，明确分工、交接与验收。AI Organization 在组合之上明确组织责任、资源约束与变更规则。这里的“责任”指工作归属和可追溯性，不表示法律人格。
 
-![AI Worker、AI Team 与 AI Org 的组成](diagrams/zh-CN/composition.png)
+![以 Teloa AI 员工为例，说明 Worker、AI Team 与 AI Org 的组合](diagrams/zh-CN/composition.png)
 
 ## 从哪里开始读
 

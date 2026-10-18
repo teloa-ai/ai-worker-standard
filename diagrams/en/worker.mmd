@@ -1,9 +1,12 @@
 flowchart LR
+    T["Teloa product concept: AI employee"] -->|Concept mapping| W
+    G["Grok product concept: Bot"] -->|Concept mapping, not vendor certification| W
     W["AI Worker · Persistent identity and responsibility"]
+    W -.-> I["In Teloa: one Worker instance identifies one AI employee"]
     W --- A["Role and responsibility<br/>Take on · Decide · Confirm · Escalate"]
     W --- B["Methods and evidence<br/>Skills · Knowledge · Procedures"]
     W --- C["Work and arrangements<br/>Inputs / Outputs · Optional routines"]
     W --- D["Execution conditions<br/>Tools · Data scope · Authorization"]
     W --- E["Experience and deliverables<br/>Memory policy · Fixed artifacts · Acceptance"]
-    classDef main fill:#164e63,color:#fff,stroke:#164e63
+    classDef main fill:#223b30,color:#fff,stroke:#2f6b52
     class W main

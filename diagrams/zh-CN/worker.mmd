@@ -1,9 +1,12 @@
 flowchart LR
+    T["Teloa 产品概念：AI 员工"] -->|概念对应| W
+    G["Grok 产品概念：Bot"] -->|概念对应，非厂商认证| W
     W["AI Worker · 持续身份与职责"]
+    W -.-> I["在 Teloa 中：一个 Worker 实例标识一位具体 AI 员工"]
     W --- A["岗位与职责<br/>接手 · 判断 · 确认 · 升级"]
     W --- B["方法与依据<br/>Skill · 知识 · SOP"]
     W --- C["工作与安排<br/>输入输出 · 按需例行"]
     W --- D["执行条件<br/>工具 · 资料范围 · 授权"]
     W --- E["经验与成果<br/>记忆规则 · 固定成果 · 验收"]
-    classDef main fill:#164e63,color:#fff,stroke:#164e63
+    classDef main fill:#223b30,color:#fff,stroke:#2f6b52
     class W main

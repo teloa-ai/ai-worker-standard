@@ -1,13 +1,13 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1070" viewBox="0 0 1200 1070" role="img" aria-label="Define, bind, run, then verify"><title>Define, bind, run, then verify</title><desc>The standard describes the contract. The host provides the instance and authority.</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#2f6b52" stroke-width="1.5"/></marker><marker id="amber" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#8d6021" stroke-width="1.5"/></marker></defs><g font-family="Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, Arial, sans-serif"><rect width="1200" height="1070" fill="#f7f9f6"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1070" viewBox="0 0 1200 1070" role="img" aria-label="An AI employee: define, run and verify"><title>An AI employee: define, run and verify</title><desc>Teloa example: a Worker definition, an AI employee instance and one Run are distinct.</desc><defs><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#2f6b52" stroke-width="1.5"/></marker><marker id="amber" markerWidth="10" markerHeight="10" refX="8" refY="4" orient="auto"><path d="M0 0 L8 4 L0 8" fill="none" stroke="#8d6021" stroke-width="1.5"/></marker></defs><g font-family="Inter, -apple-system, BlinkMacSystemFont, PingFang SC, Microsoft YaHei, Arial, sans-serif"><rect width="1200" height="1070" fill="#f7f9f6"/>
 <text x="56" y="53" fill="#2f6b52" font-size="17" font-weight="650" text-anchor="start"><tspan x="56" dy="0">03 / TECHNICAL ARCHITECTURE</tspan></text>
 <text x="1144" y="53" fill="#526b5e" font-size="16" font-weight="500" text-anchor="end"><tspan x="1144" dy="0">AI WORKER STANDARD 1.0</tspan></text>
-<text x="56" y="116" fill="#223b30" font-size="40" font-weight="650" text-anchor="start"><tspan x="56" dy="0">Define, bind, run, then verify</tspan></text>
-<text x="56" y="160" fill="#526b5e" font-size="23" font-weight="400" text-anchor="start"><tspan x="56" dy="0">The standard describes the contract. The host provides the instance and authority.</tspan></text>
+<text x="56" y="116" fill="#223b30" font-size="40" font-weight="650" text-anchor="start"><tspan x="56" dy="0">An AI employee: define, run and verify</tspan></text>
+<text x="56" y="160" fill="#526b5e" font-size="23" font-weight="400" text-anchor="start"><tspan x="56" dy="0">Teloa example: a Worker definition, an AI employee instance and one Run are distinct.</tspan></text>
 <path d="M56 192 H1144" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round" stroke-linecap="round"/>
 <rect x="56" y="234" width="336" height="574" rx="18" fill="#e9f1eb" stroke="#e9f1eb" stroke-width="1.5"/>
-<text x="80" y="278" fill="#2f6b52" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">01  Definition</tspan></text>
+<text x="80" y="278" fill="#2f6b52" font-size="25" font-weight="650" text-anchor="start"><tspan x="80" dy="0">01  Standard definition</tspan></text>
 <rect x="432" y="234" width="336" height="574" rx="18" fill="#e9f1eb" stroke="#e9f1eb" stroke-width="1.5"/>
-<text x="456" y="278" fill="#2f6b52" font-size="25" font-weight="650" text-anchor="start"><tspan x="456" dy="0">02  Host execution</tspan></text>
+<text x="456" y="278" fill="#2f6b52" font-size="25" font-weight="650" text-anchor="start"><tspan x="456" dy="0">02  Teloa host</tspan></text>
 <rect x="808" y="234" width="336" height="574" rx="18" fill="#e9f1eb" stroke="#e9f1eb" stroke-width="1.5"/>
 <text x="832" y="278" fill="#2f6b52" font-size="25" font-weight="650" text-anchor="start"><tspan x="832" dy="0">03  Delivery</tspan></text>
 <rect x="72" y="312" width="304" height="115" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
@@ -21,11 +21,11 @@
 <text x="472" y="350" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="472" dy="0">Validate support</tspan></text>
 <text x="472" y="384" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="472" dy="0">References · Contracts</tspan><tspan x="472" dy="26">Required capabilities</tspan></text>
 <rect x="448" y="459" width="304" height="115" rx="16" fill="#223b30" stroke="#223b30" stroke-width="1.5"/>
-<text x="472" y="497" fill="#ffffff" font-size="25" font-weight="650" text-anchor="start"><tspan x="472" dy="0">Bind and authorize</tspan></text>
-<text x="472" y="531" fill="#d4e5da" font-size="20" font-weight="400" text-anchor="start"><tspan x="472" dy="0">Instance · Data · Model</tspan><tspan x="472" dy="26">Connections · Scope</tspan></text>
+<text x="472" y="497" fill="#ffffff" font-size="25" font-weight="650" text-anchor="start"><tspan x="472" dy="0">Bind an AI employee</tspan></text>
+<text x="472" y="531" fill="#d4e5da" font-size="20" font-weight="400" text-anchor="start"><tspan x="472" dy="0">Worker instance · Data</tspan><tspan x="472" dy="26">Model · Connections · Scope</tspan></text>
 <rect x="448" y="606" width="304" height="155" rx="16" fill="#223b30" stroke="#223b30" stroke-width="1.5"/>
 <text x="472" y="644" fill="#ffffff" font-size="25" font-weight="650" text-anchor="start"><tspan x="472" dy="0">One Run</tspan></text>
-<text x="472" y="678" fill="#d4e5da" font-size="20" font-weight="400" text-anchor="start"><tspan x="472" dy="0">Fixed input versions</tspan><tspan x="472" dy="26">Effective authority</tspan><tspan x="472" dy="26">Actual executor</tspan></text>
+<text x="472" y="678" fill="#d4e5da" font-size="20" font-weight="400" text-anchor="start"><tspan x="472" dy="0">One employee execution</tspan><tspan x="472" dy="26">Fixed inputs and revision</tspan><tspan x="472" dy="26">Effective authority</tspan></text>
 <rect x="824" y="312" width="304" height="115" rx="16" fill="#ffffff" stroke="#d4dfd6" stroke-width="1.5"/>
 <text x="848" y="350" fill="#223b30" font-size="25" font-weight="650" text-anchor="start"><tspan x="848" dy="0">Fixed artifact</tspan></text>
 <text x="848" y="384" fill="#526b5e" font-size="20" font-weight="400" text-anchor="start"><tspan x="848" dy="0">Content + version</tspan><tspan x="848" dy="26">Actual contributors</tspan></text>

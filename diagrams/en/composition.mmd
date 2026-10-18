@@ -1,10 +1,11 @@
 flowchart TB
+    %% Worker, Team and Org composition using Teloa AI employees; not deployment evidence.
     O["AI Organization<br/>Accountability · Resource constraints · Change rules"]
-    O --> T1["AI Team A<br/>Shared output · Roles · Handoffs · Acceptance"]
-    O --> T2["AI Team B<br/>Shared output · Roles · Handoffs · Acceptance"]
-    T1 --> A["AI Worker<br/>Triage and investigation"]
-    T2 --> B["AI Worker<br/>Detection engineering"]
-    T1 -. "Per-task participation" .-> Q["Shared quality Worker<br/>One instance, separately authorized contexts"]
+    O --> T1["AI team A · Team contract<br/>Shared output · Roles · Handoffs · Acceptance"]
+    O --> T2["AI team B · Team contract<br/>Shared output · Roles · Handoffs · Acceptance"]
+    T1 --> A["AI employee · Worker instance<br/>Triage and investigation"]
+    T2 --> B["AI employee · Worker instance<br/>Detection engineering"]
+    T1 -. "Per-task participation" .-> Q["Shared quality AI employee<br/>One Worker instance, separately authorized contexts"]
     T2 -. "Per-task participation" .-> Q
-    classDef main fill:#164e63,color:#fff,stroke:#164e63
+    classDef main fill:#223b30,color:#fff,stroke:#2f6b52
     class O main

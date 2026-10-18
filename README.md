@@ -12,7 +12,7 @@ An **AI Team** combines workers around a shared deliverable, with explicit respo
 
 These terms describe working arrangements. They do not confer legal personality or authority to act on someone's behalf.
 
-![Worker, Team and Organization](diagrams/en/composition.png)
+![Worker, AI Team and AI Org composition, illustrated with Teloa AI employees](diagrams/en/composition.png)
 
 ## What this standard specifies
 

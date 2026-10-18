@@ -1,8 +1,9 @@
 sequenceDiagram
-    participant O as Task owner
-    participant H as Host / coordinator
-    participant A as Analyst Worker
-    participant Q as Review Worker
+    participant O as Human owner
+    participant H as Teloa / coordinator
+    participant A as Analyst AI employee
+    participant Q as Review AI employee
+    Note over H,Q: AI employees map to Workers<br/>The AI team follows a Team contract
     O->>H: Assign team work, inputs and authority
     H->>H: Check contracts, dependencies and bindings
     H->>A: Distribute authorized input and establish assignment
