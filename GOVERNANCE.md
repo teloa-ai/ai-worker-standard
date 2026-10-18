@@ -1,6 +1,6 @@
 # Maintenance and changes
 
-This standard is maintained by Teloa. Its founding authors are **Max and Morgan, co-founders of Teloa**. The maintainers review contributions openly; maintenance by Teloa does not imply industry consensus.
+This standard is maintained by Teloa. Its founding authors are **Max Luo and Morgan Chen, co-founders of Teloa**. The maintainers review contributions openly; maintenance by Teloa does not imply industry consensus.
 
 ## Proposing a change
 
@@ -25,7 +25,7 @@ There is currently no certification program or conformance logo. An implementati
 
 ## 中文说明
 
-本仓由 Teloa 维护，发起作者为 Teloa 联合创始人 Max、Morgan。任何人均可提交问题、反例和实现报告。变更须区分文字澄清与语义变化；改变接受或拒绝结果的修订必须升级相应规范版本。已发布标签和旧定义保持不变。贡献按 Apache-2.0 许可提交，不得包含他人私有数据或未经许可的材料。
+本仓由 Teloa 维护，发起作者为 **Max Luo、Morgan Chen｜Teloa 联合创始人**。任何人均可提交问题、反例和实现报告。变更须区分文字澄清与语义变化；改变接受或拒绝结果的修订必须升级相应规范版本。已发布标签和旧定义保持不变。贡献按 Apache-2.0 许可提交，不得包含他人私有数据或未经许可的材料。
 
 ## Scope of nested scheduling
 

@@ -1,6 +1,6 @@
 # AI Worker: how an employee works and a team delivers
 
-**Max and Morgan, co-founders of Teloa** · 18 October 2026
+**Max Luo and Morgan Chen, co-founders of Teloa** · 18 October 2026
 
 A name and a role prompt are enough to start experimenting. A second assignment raises more practical questions: is this the same worker as before? Which material did it use? What reached the next member? Who decides whether to accept the result?
 

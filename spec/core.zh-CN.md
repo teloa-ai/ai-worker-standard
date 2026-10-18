@@ -1,6 +1,6 @@
 # AI Worker、AI Team 与 AI Organization 开放定义标准 1.0
 
-**Max、Morgan｜Teloa 联合创始人**
+**Max Luo、Morgan Chen｜Teloa 联合创始人**
 
 核心版本：`1.0`。发布日期：2026-10-18。状态：开放规范。
 

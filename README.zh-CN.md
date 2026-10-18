@@ -2,7 +2,7 @@
 
 **用一套工作合同描述 AI 工作者、AI 团队和 AI 组织。**
 
-**Max、Morgan｜Teloa 联合创始人** · 2026 年 10 月 18 日
+**Max Luo、Morgan Chen｜Teloa 联合创始人** · 2026 年 10 月 18 日
 
 [English](README.md) · [组成、架构与流程图解](docs/guide.zh-CN.md) · [Grok Bot 与 Teloa 映射](docs/mappings.md)
 

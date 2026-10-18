@@ -2,7 +2,7 @@
 
 **An open definition standard for AI Workers, AI Teams and AI Organizations.**
 
-By **Max and Morgan, co-founders of Teloa** · 18 October 2026
+By **Max Luo and Morgan Chen, co-founders of Teloa** · 18 October 2026
 
 [简体中文](README.zh-CN.md) · [Read the illustrated guide](docs/guide.en.md) · [中文图解](docs/guide.zh-CN.md)
 
